@@ -17,6 +17,7 @@ import {
 import storage from "redux-persist/lib/storage";
 
 import { languageSlice } from "../features/language";
+import { languageListenerMiddleware } from "../features/language/language-middleware";
 
 const persistConfig = {
   key: "root",
@@ -36,7 +37,7 @@ export const makeStore = () => {
         serializableCheck: {
           ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
         },
-      }),
+      }).prepend(languageListenerMiddleware.middleware),
   });
 };
 
