@@ -22,6 +22,7 @@ import { sizeSlice } from "../features/size";
 import { sizeListenerMiddleware } from "../features/size/size-middleware";
 import { themeSlice } from "../features/theme";
 import { themeListenerMiddleware } from "../features/theme/theme-middleware";
+import { modalSlice } from "../features/modal";
 
 const persistConfig = {
   key: "root",
@@ -30,7 +31,13 @@ const persistConfig = {
   blacklist: [],
 };
 
-const rootReducer = combineSlices(themeSlice, sizeSlice, languageSlice);
+const rootReducer = combineSlices(
+  themeSlice,
+  sizeSlice,
+  languageSlice,
+  modalSlice
+);
+
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const makeStore = () => {
