@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  select {
+    padding: var(--spacing-md);
+    border: var(--border-thickness) solid var(--color-dark);
+    border-radius: var(--border-radius);
+    background-color: var(--color-light);
+    color: var(--color-dark);
+  }
+}

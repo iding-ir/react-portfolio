@@ -1,4 +1,5 @@
 .container {
   grid-row: start-main/end-main;
   grid-column: start-main/end-main;
+  padding: var(--spacing-md);
 }

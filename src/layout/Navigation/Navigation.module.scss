@@ -1,4 +1,7 @@
 .container {
   grid-row: start-navigation/end-navigation;
   grid-column: start-navigation/end-navigation;
+  padding: var(--spacing-sm);
+  box-shadow: var(--box-shadow-md);
+  background-color: var(--color-lighter);
 }

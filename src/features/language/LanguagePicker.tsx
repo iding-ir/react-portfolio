@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useAppDispatch } from "../../app/hooks";
 import { LANGUAGES, Language } from "./language";
 import { selectLanguage, setLanguage } from "./language-slice";
+import styles from "./LanguagePicker.module.scss";
 
 export const LanguagePicker = () => {
   const dispatch = useAppDispatch();
@@ -13,14 +14,16 @@ export const LanguagePicker = () => {
   };
 
   return (
-    <select onChange={handleChange} defaultValue={language}>
-      {Object.values(LANGUAGES).map((language) => {
-        return (
-          <option key={language} value={language}>
-            {language}
-          </option>
-        );
-      })}
-    </select>
+    <div className={styles.container}>
+      <select onChange={handleChange} defaultValue={language}>
+        {Object.values(LANGUAGES).map((language) => {
+          return (
+            <option key={language} value={language}>
+              {language}
+            </option>
+          );
+        })}
+      </select>
+    </div>
   );
 };
