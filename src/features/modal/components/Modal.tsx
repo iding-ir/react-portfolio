@@ -6,7 +6,7 @@ import { LanguageSelector } from "../../language";
 import { ThemeSelector } from "../../theme";
 import { SizeSelector } from "../../size";
 import { Icon } from "../../../components/Icon";
-import CloseIcon from "./icon-close.svg";
+import CloseIcon from "../../../assets/icon-close.svg";
 import styles from "./Modal.module.scss";
 
 export const Modal = () => {

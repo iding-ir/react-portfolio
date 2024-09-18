@@ -2,11 +2,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: var(--icon-size-lg);
+  height: var(--icon-size-lg);
+  padding: var(--spacing-md);
+  background-color: var(--color-primary-dark);
   cursor: pointer;
 
   svg {
-    width: auto;
-    padding: var(--spacing-md);
-    height: var(--icon-size-lg);
+    width: 100%;
+    height: auto;
+
+    * {
+      fill: var(--color-lighter);
+    }
   }
 }

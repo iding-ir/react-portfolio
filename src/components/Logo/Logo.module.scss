@@ -2,10 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--spacing-sm);
+  width: var(--icon-size-lg);
+  height: var(--icon-size-lg);
 
   svg {
-    width: auto;
-    height: var(--icon-size-lg);
+    width: 100%;
+    height: auto;
   }
 }
