@@ -16,8 +16,6 @@ export const themeSlice = createAppSlice({
   initialState,
   reducers: (create) => ({
     setTheme: create.reducer((state, { payload }: PayloadAction<Theme>) => {
-      console.log(payload);
-
       state.current = payload;
     }),
   }),

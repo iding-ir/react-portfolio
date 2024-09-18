@@ -1,11 +1,11 @@
 import { createAppSlice } from "../createAppSlice";
 
 export interface ModalState {
-  current: boolean;
+  open: boolean;
 }
 
 const initialState: ModalState = {
-  current: false,
+  open: false,
 };
 
 export const modalSlice = createAppSlice({
@@ -13,14 +13,14 @@ export const modalSlice = createAppSlice({
   initialState,
   reducers: (create) => ({
     openModal: create.reducer((state) => {
-      state.current = true;
+      state.open = true;
     }),
     closeModal: create.reducer((state) => {
-      state.current = false;
+      state.open = false;
     }),
   }),
   selectors: {
-    selectModal: ({ current }) => current,
+    selectModal: ({ open }) => open,
   },
 });
 

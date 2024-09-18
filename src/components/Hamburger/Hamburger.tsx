@@ -1,7 +1,7 @@
-import Icon from "./icon-hamburger.svg";
-import styles from "./Hamburger.module.scss";
 import { useAppDispatch } from "../../app/hooks";
 import { openModal } from "../../features/modal";
+import { Icon } from "../Icon";
+import HamburgerIcon from "./icon-hamburger.svg";
 
 export const Hamburger = () => {
   const dispatch = useAppDispatch();
@@ -11,8 +11,8 @@ export const Hamburger = () => {
   };
 
   return (
-    <div className={styles.container} onClick={handleClick}>
-      <Icon />
-    </div>
+    <Icon onClick={handleClick}>
+      <HamburgerIcon />
+    </Icon>
   );
 };
