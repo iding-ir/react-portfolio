@@ -1,5 +1,5 @@
 import styles from "./Main.module.scss";
 
-export const Main = () => {
-  return <div className={styles.container}>Main</div>;
+export const Main = ({ content }: { content: string }) => {
+  return <div className={styles.container}>{content}</div>;
 };

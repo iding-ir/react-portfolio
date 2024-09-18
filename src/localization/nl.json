@@ -1,8 +1,13 @@
 {
   "pages": {
-    "home": "[nl] Home",
-    "about": "[nl] About",
-    "contact": "[nl] Contact",
-    "noMatch": "[nl] 404 Not Found!"
-  }
+    "about": {
+      "title": "[nl] About",
+      "content": "[nl] This is a simple about page"
+    },
+    "noMatch": {
+      "title": "[nl] 404",
+      "content": "[nl] Page not found"
+    }
+  },
+  "footer": "[nl] 2016-2024"
 }

@@ -1,5 +1,8 @@
+import { useTranslation } from "react-i18next";
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {
-  return <div className={styles.container}>Footer</div>;
+  const { t } = useTranslation();
+
+  return <div className={styles.container}>{t("footer")}</div>;
 };

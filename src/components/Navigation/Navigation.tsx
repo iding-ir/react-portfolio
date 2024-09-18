@@ -6,11 +6,11 @@ import styles from "./Navigation.module.scss";
 export const Navigation = () => {
   return (
     <div className={styles.container}>
-      <Logo />
+      <Hamburger />
 
       <Menu />
 
-      <Hamburger />
+      <Logo />
     </div>
   );
 };

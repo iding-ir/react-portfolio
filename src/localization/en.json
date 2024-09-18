@@ -1,8 +1,13 @@
 {
   "pages": {
-    "home": "Home",
-    "about": "About",
-    "contact": "Contact",
-    "noMatch": "404 Not Found!"
-  }
+    "about": {
+      "title": "About",
+      "content": "This is a simple about page"
+    },
+    "noMatch": {
+      "title": "404",
+      "content": "Page not found"
+    }
+  },
+  "footer": "2016-2024"
 }
