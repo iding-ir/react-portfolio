@@ -30,7 +30,7 @@ export const Modal = () => {
       <SizeSelector />
 
       <div className={styles.close}>
-        <Icon onClick={handleClick}>
+        <Icon onClick={handleClick} color="reverse">
           <CloseIcon />
         </Icon>
       </div>

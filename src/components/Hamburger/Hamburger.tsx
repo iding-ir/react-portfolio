@@ -11,7 +11,7 @@ export const Hamburger = () => {
   };
 
   return (
-    <Icon onClick={handleClick}>
+    <Icon onClick={handleClick} color="reverse">
       <MenuIcon />
     </Icon>
   );

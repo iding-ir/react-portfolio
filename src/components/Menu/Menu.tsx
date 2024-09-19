@@ -1,11 +1,11 @@
+import { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 import { Icon } from "../Icon";
-import styles from "./Menu.module.scss";
-import MoreIcon from "../../assets/icon-more.svg";
-import { useEffect, useRef, useState } from "react";
 import { routes } from "../../routes";
-import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import MoreIcon from "../../assets/icon-more.svg";
+import styles from "./Menu.module.scss";
 
 export const Menu = () => {
   const { t } = useTranslation();
@@ -14,7 +14,7 @@ export const Menu = () => {
   const [isClosed, setIsClosed] = useState(true);
   const [containerSize, setContainerSize] = useState(0);
   const [iconSize, setIconSize] = useState(0);
-  const items = Object.values(routes).filter((route) => route.inMenu);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -38,36 +38,48 @@ export const Menu = () => {
     resizeObserver.observe(iconRef.current);
   }, []);
 
+  const items = Object.values(routes).filter((route) => route.inMenu);
   const isPrimary = (index: number) => (index + 2) * iconSize < containerSize;
   const hasSecondary = () => items.some((_, index) => !isPrimary(index));
+  const visibleItems = items.filter((_, index) => isPrimary(index));
+  const collapsedItems = items.filter((_, index) => !isPrimary(index));
+  const collapsedClassNames = clsx({ [styles.collapsed]: isClosed });
+  const moreClassNames = clsx({ [styles.hidden]: !hasSecondary() });
 
   return (
     <div className={styles.container} ref={containerRef}>
       <ul className={styles.primary}>
-        {items
-          .filter((_, index) => isPrimary(index))
-          .map(({ path, title }) => (
-            <li key={path}>{<Link to={path}>{t(title)}</Link>}</li>
-          ))}
+        {visibleItems.map(({ path, title, icon }) => (
+          <li key={path}>
+            <Link to={path}>
+              <Icon animated active={path === pathname}>
+                {icon}
+
+                {t(title)}
+              </Icon>
+            </Link>
+          </li>
+        ))}
       </ul>
 
       <ul className={styles.secondary}>
-        <li
-          className={clsx({ [styles.hidden]: !hasSecondary() })}
-          ref={iconRef}
-        >
+        <li className={moreClassNames} ref={iconRef}>
           <Icon onClick={() => setIsClosed(!isClosed)}>
             <MoreIcon />
           </Icon>
         </li>
 
-        {items
-          .filter((_, index) => !isPrimary(index))
-          .map(({ path, title }) => (
-            <li className={clsx({ [styles.collapsed]: isClosed })} key={path}>
-              {<Link to={path}>{t(title)}</Link>}
-            </li>
-          ))}
+        {collapsedItems.map(({ path, title, icon }) => (
+          <li className={collapsedClassNames} key={path}>
+            <Link to={path}>
+              <Icon animated active={path === pathname}>
+                {icon}
+
+                {t(title)}
+              </Icon>
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   );

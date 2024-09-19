@@ -3,6 +3,9 @@ import { Contact } from "../pages/Contact";
 import { Resume } from "../pages/Resume";
 import { Route } from "./types";
 import { URLS } from "./urls";
+import AboutIcon from "../assets/icon-info.svg";
+import ContactIcon from "../assets/icon-headphones.svg";
+import ResumeIcon from "../assets/icon-document.svg";
 
 export const routes: Route[] = [
   {
@@ -16,6 +19,7 @@ export const routes: Route[] = [
     path: URLS.ABOUT,
     exact: false,
     component: <About />,
+    icon: <AboutIcon />,
     inMenu: true,
   },
   {
@@ -23,6 +27,7 @@ export const routes: Route[] = [
     path: URLS.RESUME,
     exact: false,
     component: <Resume />,
+    icon: <ResumeIcon />,
     inMenu: true,
   },
   {
@@ -30,6 +35,7 @@ export const routes: Route[] = [
     path: URLS.CONTACT,
     exact: false,
     component: <Contact />,
+    icon: <ContactIcon />,
     inMenu: true,
   },
   {

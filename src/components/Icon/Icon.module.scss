@@ -1,13 +1,70 @@
 .container {
   flex-shrink: 0;
   display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
   justify-content: center;
   align-items: center;
   width: var(--icon-size-lg);
   height: var(--icon-size-lg);
   padding: var(--spacing-md);
-  background-color: var(--color-primary-dark);
+  overflow: hidden;
   cursor: pointer;
+
+  &.sm {
+    width: var(--icon-size-sm);
+    height: var(--icon-size-sm);
+  }
+
+  &.md {
+    width: var(--icon-size-md);
+    height: var(--icon-size-md);
+  }
+
+  &.lg {
+    width: var(--icon-size-lg);
+    height: var(--icon-size-lg);
+  }
+
+  &.normal {
+    color: var(--color-primary-dark);
+    background-color: var(--color-light);
+
+    * {
+      fill: var(--color-primary-dark);
+    }
+
+    &.active,
+    &:active,
+    &:hover {
+      color: var(--color-lighter);
+      background-color: var(--color-secondary-light);
+
+      * {
+        fill: var(--color-lighter);
+      }
+    }
+  }
+
+  &.reverse {
+    color: var(--color-lighter);
+    background-color: var(--color-primary-dark);
+
+    * {
+      fill: var(--color-lighter);
+    }
+
+    &.active,
+    &:active,
+    &:hover {
+      color: var(--color-light);
+      background-color: var(--color-secondary-dark);
+
+      * {
+        fill: var(--color-light);
+      }
+    }
+  }
 
   svg {
     width: 100%;
@@ -16,5 +73,9 @@
     * {
       fill: var(--color-lighter);
     }
+  }
+
+  .text {
+    color: var(--color-lighter);
   }
 }

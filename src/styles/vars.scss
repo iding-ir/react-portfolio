@@ -13,11 +13,11 @@ html {
 
   // Light shades
   --color-primary-light: #1e88e5;
-  --color-secondary-light: #1e88e5;
+  --color-secondary-light: #fb8c00;
 
   // Dark shades
   --color-primary-dark: #1565c0;
-  --color-secondary-dark: #1565c0;
+  --color-secondary-dark: #ef6c00;
 
   --color-lighter: #fafafa;
   --color-light: #eeeeee;
@@ -55,8 +55,8 @@ html {
   --border-thickness-lg: 0.3rem;
 
   --transition-sm: 0.2s ease;
-  --transition-md: 0.4s ease;
-  --transition-lg: 0.6s ease;
+  --transition-md: 0.3s ease;
+  --transition-lg: 0.5s ease;
 
   --box-shadow-sm: 0px 0px 4px rgba(#{$dark}, #{$dark}, #{$dark}, 0.1);
   --box-shadow-md: 0px 0px 8px rgba(#{$dark}, #{$dark}, #{$dark}, 0.2);
@@ -72,11 +72,11 @@ html {
   &[data-theme="DARK"] {
     // Light shades
     --color-primary-light: #ef6c00;
-    --color-secondary-light: #ef6c00;
+    --color-secondary-light: #1565c0;
 
     // Dark shades
     --color-primary-dark: #fb8c00;
-    --color-secondary-dark: #fb8c00;
+    --color-secondary-dark: #1e88e5;
 
     --color-lighter: #212121;
     --color-light: #323232;
