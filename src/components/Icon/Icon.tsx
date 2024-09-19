@@ -5,12 +5,12 @@ export const Icon = ({
   onClick,
   children,
 }: {
-  onClick: () => void;
+  onClick?: () => void;
   children: ReactNode;
 }) => {
   return (
-    <div className={styles.container} onClick={onClick}>
+    <i className={styles.container} onClick={onClick}>
       {children}
-    </div>
+    </i>
   );
 };

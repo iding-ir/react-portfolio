@@ -1,6 +1,8 @@
 export enum URLS {
   HOME = "/",
   ABOUT = "/about",
+  RESUME = "/resume",
+  CONTACT = "/contact",
   NO_MATCH = "*",
 }
 

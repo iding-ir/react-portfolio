@@ -5,10 +5,10 @@ import { Modal } from "../../features/modal";
 
 export const Section = ({ children }: { children: ReactNode }) => {
   return (
-    <section className={styles.container}>
+    <div className={styles.container}>
       {children}
 
       <Modal />
-    </section>
+    </div>
   );
 };

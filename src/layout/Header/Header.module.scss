@@ -2,5 +2,6 @@
   grid-row: start-header/end-header;
   grid-column: start-header/end-header;
   background-color: var(--color-lighter);
-  border-bottom: var(--border-thickness-md) solid var(--color-primary-light);
+  box-shadow: 0 calc(-1 * var(--border-thickness-md)) 0 0
+    var(--color-primary-dark) inset;
 }

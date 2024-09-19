@@ -4,5 +4,5 @@ import styles from "./Footer.module.scss";
 export const Footer = () => {
   const { t } = useTranslation();
 
-  return <div className={styles.container}>{t("footer")}</div>;
+  return <footer className={styles.container}>{t("footer")}</footer>;
 };
