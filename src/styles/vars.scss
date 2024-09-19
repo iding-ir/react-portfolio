@@ -54,9 +54,9 @@ html {
   --border-thickness-md: 0.2rem;
   --border-thickness-lg: 0.3rem;
 
-  --transition-sm: 0.2s ease;
-  --transition-md: 0.3s ease;
-  --transition-lg: 0.5s ease;
+  --transition-sm: 0.2s ease-in-out;
+  --transition-md: 0.3s ease-in-out;
+  --transition-lg: 0.5s ease-in-out;
 
   --box-shadow-sm: 0px 0px 4px rgba(#{$dark}, #{$dark}, #{$dark}, 0.1);
   --box-shadow-md: 0px 0px 8px rgba(#{$dark}, #{$dark}, #{$dark}, 0.2);

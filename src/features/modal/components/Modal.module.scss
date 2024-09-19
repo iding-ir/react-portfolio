@@ -1,5 +1,7 @@
 .container {
-  display: none;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -9,9 +11,11 @@
   height: 100%;
   z-index: 100;
   background-color: var(--color-lighter);
+  transition: var(--transition-md);
 
   &.open {
-    display: flex;
+    visibility: visible;
+    opacity: 1;
   }
 
   .close {
