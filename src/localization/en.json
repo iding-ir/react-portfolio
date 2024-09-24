@@ -17,5 +17,20 @@
       "content": "Page not found"
     }
   },
+  "selects": {
+    "language": {
+      "EN": "English",
+      "NL": "Dutch"
+    },
+    "theme": {
+      "LIGHT": "Light",
+      "DARK": "Dark"
+    },
+    "size": {
+      "SM": "Small",
+      "MD": "Medium",
+      "LG": "Large"
+    }
+  },
   "footer": "2016-2024"
 }
