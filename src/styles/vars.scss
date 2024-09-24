@@ -69,6 +69,8 @@ html {
   --box-shadow-inset-lg: 0px 0px 12px inset
     rgba(#{$dark}, #{$dark}, #{$dark}, 0.3);
 
+  --page-transition-duration: 1000ms;
+
   &[data-theme="DARK"] {
     // Light shades
     --color-primary-light: #ef6c00;
