@@ -7,7 +7,6 @@
   align-items: center;
   width: var(--icon-size-lg);
   height: var(--icon-size-lg);
-  padding: var(--spacing-md);
   overflow: hidden;
   cursor: pointer;
   transition: var(--transition-sm);
@@ -68,8 +67,8 @@
   }
 
   svg {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 40%;
 
     * {
       fill: var(--color-lighter);
