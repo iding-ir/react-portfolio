@@ -17,7 +17,9 @@ export const Menu = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    if (!containerRef.current) {
+      return;
+    }
 
     const resizeObserver = new ResizeObserver((entries) => {
       const { width, height } = entries[0].contentRect;
@@ -29,7 +31,9 @@ export const Menu = () => {
   }, []);
 
   useEffect(() => {
-    if (!iconRef.current) return;
+    if (!iconRef.current) {
+      return;
+    }
 
     const resizeObserver = new ResizeObserver((entries) => {
       setIconSize(entries[0].target.getBoundingClientRect().width);
@@ -44,7 +48,9 @@ export const Menu = () => {
   const visibleItems = items.filter((_, index) => isPrimary(index));
   const collapsedItems = items.filter((_, index) => !isPrimary(index));
   const collapsedClassNames = clsx({ [styles.collapsed]: isClosed });
-  const moreClassNames = clsx({ [styles.hidden]: !hasSecondary() });
+  const moreClassNames = clsx({
+    [styles.hidden]: !containerSize || !iconSize || !hasSecondary(),
+  });
 
   return (
     <div className={styles.container} ref={containerRef}>
