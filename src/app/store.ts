@@ -28,7 +28,7 @@ const persistConfig = {
   key: "root",
   version: 1,
   storage,
-  blacklist: [],
+  blacklist: [modalSlice.name],
 };
 
 const rootReducer = combineSlices(
@@ -40,25 +40,23 @@ const rootReducer = combineSlices(
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-export const makeStore = () => {
-  return configureStore({
-    reducer: persistedReducer,
-    middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware({
-        serializableCheck: {
-          ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-        },
-      })
-        .prepend(languageListenerMiddleware.middleware)
-        .prepend(themeListenerMiddleware.middleware)
-        .prepend(sizeListenerMiddleware.middleware),
-  });
-};
+export const store = configureStore({
+  reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    })
+      .prepend(languageListenerMiddleware.middleware)
+      .prepend(themeListenerMiddleware.middleware)
+      .prepend(sizeListenerMiddleware.middleware),
+});
 
-export const persistor = persistStore(makeStore());
+export const persistor = persistStore(store);
 
 export type RootState = ReturnType<typeof rootReducer>;
-export type AppStore = ReturnType<typeof makeStore>;
+export type AppStore = typeof store;
 export type AppDispatch = AppStore["dispatch"];
 export type AppThunk<ThunkReturnType = void> = ThunkAction<
   ThunkReturnType,
