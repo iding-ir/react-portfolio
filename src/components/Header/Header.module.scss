@@ -4,7 +4,7 @@
   font-size: var(--font-size-lg);
   color: var(--color-secondary-dark);
   padding: var(--spacing-lg);
-  animation: accordion 0.5s;
+  animation: accordion 0.8s;
   animation-iteration-count: 1;
 
   @keyframes accordion {
@@ -14,17 +14,19 @@
     35% {
       letter-spacing: 1.6rem;
     }
-    60% {
+    50% {
       letter-spacing: 0.5rem;
+      opacity: 0.3;
     }
-    75% {
+    65% {
       letter-spacing: 0.8rem;
     }
-    90% {
-      letter-spacing: -0.5rem;
+    80% {
+      letter-spacing: -0.3rem;
     }
     100% {
       letter-spacing: 0;
+      opacity: 1;
     }
   }
 }

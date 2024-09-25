@@ -69,7 +69,7 @@ html {
   --box-shadow-inset-lg: 0px 0px 12px inset
     rgba(#{$dark}, #{$dark}, #{$dark}, 0.3);
 
-  --page-transition-duration: 600ms;
+  --page-transition-duration: 1500ms;
 
   &[data-theme="DARK"] {
     // Light shades
