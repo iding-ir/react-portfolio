@@ -1,8 +1,40 @@
-.select {
+.container {
+  position: relative;
   width: 300px;
-  padding: var(--spacing-md);
-  border: var(--border-thickness) solid var(--color-dark);
-  border-radius: var(--border-radius);
-  background-color: var(--color-light);
-  color: var(--color-dark);
+
+  .select {
+    padding: var(--spacing-md);
+    width: 100%;
+    height: 100%;
+    border: var(--border-thickness) solid var(--color-dark);
+    border-radius: var(--border-radius);
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    cursor: pointer;
+    appearance: none;
+
+    &:focus ~ .icon {
+      * {
+        fill: var(--color-secondary-dark);
+      }
+    }
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    right: var(--spacing-sm);
+    width: var(--icon-size-sm);
+    height: var(--icon-size-sm);
+    transform: translateY(-50%);
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+
+    * {
+      fill: var(--color-primary-dark);
+    }
+  }
 }

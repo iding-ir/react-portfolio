@@ -7,48 +7,7 @@
   opacity: 0;
   visibility: hidden;
   background-color: var(--color-light);
-
-  z-index: 999;
-
-  @keyframes fade-animation {
-    0% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    40% {
-      opacity: 1;
-      visibility: visible;
-    }
-    60% {
-      opacity: 1;
-      visibility: visible;
-    }
-    100% {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-
-  @keyframes slide-animation {
-    0% {
-      width: 0;
-      opacity: 0;
-      visibility: visible;
-    }
-    30% {
-      width: 100%;
-      opacity: 1;
-    }
-    70% {
-      width: 100%;
-      opacity: 1;
-    }
-    100% {
-      width: 0;
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
+  z-index: 100;
 
   &.fade {
     animation: fade-animation;
@@ -61,5 +20,46 @@
   &.active {
     animation-duration: var(--page-transition-duration);
     animation-iteration-count: 1;
+  }
+}
+
+@keyframes fade-animation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  30% {
+    opacity: 1;
+    visibility: visible;
+  }
+  70% {
+    opacity: 1;
+    visibility: visible;
+    background-color: var(--color-lighter);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes slide-animation {
+  0% {
+    width: 0;
+    opacity: 0;
+    visibility: visible;
+  }
+  30% {
+    width: 100%;
+    opacity: 1;
+  }
+  70% {
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
   }
 }

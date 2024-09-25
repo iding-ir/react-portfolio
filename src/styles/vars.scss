@@ -69,16 +69,16 @@ html {
   --box-shadow-inset-lg: 0px 0px 12px inset
     rgba(#{$dark}, #{$dark}, #{$dark}, 0.3);
 
-  --page-transition-duration: 1000ms;
+  --page-transition-duration: 600ms;
 
   &[data-theme="DARK"] {
     // Light shades
-    --color-primary-light: #ef6c00;
-    --color-secondary-light: #1565c0;
+    --color-primary-light: #2e7d32;
+    --color-secondary-light: #ff8f00;
 
     // Dark shades
-    --color-primary-dark: #fb8c00;
-    --color-secondary-dark: #1e88e5;
+    --color-primary-dark: #43a047;
+    --color-secondary-dark: #ffb300;
 
     --color-lighter: #212121;
     --color-light: #323232;

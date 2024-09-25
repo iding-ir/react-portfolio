@@ -58,10 +58,8 @@ export const Menu = () => {
         {visibleItems.map(({ path, title, icon }) => (
           <li key={path}>
             <Link to={path}>
-              <Icon animated active={path === pathname}>
+              <Icon animated active={path === pathname} text={t(title)}>
                 {icon}
-
-                {t(title)}
               </Icon>
             </Link>
           </li>
@@ -78,10 +76,8 @@ export const Menu = () => {
         {collapsedItems.map(({ path, title, icon }) => (
           <li className={collapsedClassNames} key={path}>
             <Link to={path}>
-              <Icon animated active={path === pathname}>
+              <Icon animated active={path === pathname} text={t(title)}>
                 {icon}
-
-                {t(title)}
               </Icon>
             </Link>
           </li>

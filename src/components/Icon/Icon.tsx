@@ -7,6 +7,7 @@ export const Icon = ({
   color = "normal",
   active = false,
   animated = false,
+  text,
   onClick,
   children,
 }: {
@@ -14,6 +15,7 @@ export const Icon = ({
   color?: "normal" | "reverse";
   active?: boolean;
   animated?: boolean;
+  text?: string;
   onClick?: () => void;
   children: ReactNode;
 }) => {
@@ -30,6 +32,8 @@ export const Icon = ({
   return (
     <i className={classNames} onClick={onClick}>
       {children}
+
+      {text && <span className={styles.text}>{text}</span>}
     </i>
   );
 };

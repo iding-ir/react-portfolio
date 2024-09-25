@@ -2,5 +2,29 @@
   width: 100%;
   height: 100%;
   font-size: var(--font-size-lg);
+  color: var(--color-secondary-dark);
   padding: var(--spacing-lg);
+  animation: accordion 0.5s;
+  animation-iteration-count: 1;
+
+  @keyframes accordion {
+    0% {
+      letter-spacing: 0;
+    }
+    35% {
+      letter-spacing: 1.6rem;
+    }
+    60% {
+      letter-spacing: 0.5rem;
+    }
+    75% {
+      letter-spacing: 0.8rem;
+    }
+    90% {
+      letter-spacing: -0.5rem;
+    }
+    100% {
+      letter-spacing: 0;
+    }
+  }
 }

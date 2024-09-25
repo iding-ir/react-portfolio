@@ -1,6 +1,6 @@
 import { Hamburger } from "../Hamburger";
-import { Logo } from "../Logo/Logo";
-import { Menu } from "../Menu/Menu";
+import { Logo } from "../Logo";
+import { Menu } from "../Menu";
 import styles from "./Navigation.module.scss";
 
 export const Navigation = () => {
