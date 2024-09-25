@@ -1,4 +1,5 @@
 import { PageTransition } from "../PageTransition";
+import { Wave } from "../Wave";
 import styles from "./Main.module.scss";
 
 export const Main = ({ content }: { content: string }) => {
@@ -7,6 +8,8 @@ export const Main = ({ content }: { content: string }) => {
       {content}
 
       <PageTransition />
+
+      <Wave />
     </main>
   );
 };
