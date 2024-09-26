@@ -12,6 +12,7 @@
   z-index: 500;
   background-color: var(--color-lighter);
   transition: var(--transition-md);
+  overflow: hidden;
 
   &.open {
     visibility: visible;

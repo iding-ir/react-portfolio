@@ -58,9 +58,9 @@ html {
   --transition-md: 0.3s ease-in-out;
   --transition-lg: 0.5s ease-in-out;
 
-  --box-shadow-sm: 0px 0px 4px rgba(#{$dark}, #{$dark}, #{$dark}, 0.1);
-  --box-shadow-md: 0px 0px 8px rgba(#{$dark}, #{$dark}, #{$dark}, 0.2);
-  --box-shadow-lg: 0px 0px 12px rgba(#{$dark}, #{$dark}, #{$dark}, 0.3);
+  --box-shadow-sm: 0px 0px 3px rgba(#{$dark}, #{$dark}, #{$dark}, 0.1);
+  --box-shadow-md: 0px 0px 5px rgba(#{$dark}, #{$dark}, #{$dark}, 0.1);
+  --box-shadow-lg: 0px 0px 8px rgba(#{$dark}, #{$dark}, #{$dark}, 0.2);
 
   --box-shadow-inset-sm: 0px 0px 4px inset
     rgba(#{$dark}, #{$dark}, #{$dark}, 0.1);
