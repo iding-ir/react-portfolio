@@ -1,39 +1,4 @@
-@charset "utf-8";
-
-html,
-body,
-#root {
-  padding: 0;
-  margin: 0;
-  height: 100%; /* Avoiding vh because it's not best supported by some mobile browsers */
-}
-
-html {
-  font-family: Roboto;
-  font-size: calc(var(--size-ratio) * 12px);
-  line-height: 1.5;
-}
-
-@media only screen and (min-width: 600px) {
-  html {
-    font-size: calc(var(--size-ratio) * 14px);
-  }
-}
-
-@media only screen and (min-width: 840px) {
-  html {
-    font-size: calc(var(--size-ratio) * 16px);
-  }
-}
-
-body * {
-  font-size: 1rem;
-  color: var(--color-dark);
-}
-
-html *,
-html *::after,
-html *::before {
-  box-sizing: border-box;
-  user-select: none;
-}
+// Orders are important
+@use "./reset.scss";
+@use "./fonts.scss";
+@use "./main.scss";
