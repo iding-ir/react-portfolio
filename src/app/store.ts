@@ -18,11 +18,11 @@ import storage from "redux-persist/lib/storage";
 
 import { languageSlice } from "../features/language";
 import { languageListenerMiddleware } from "../features/language/language-middleware";
+import { modalSlice } from "../features/modal";
 import { sizeSlice } from "../features/size";
 import { sizeListenerMiddleware } from "../features/size/size-middleware";
 import { themeSlice } from "../features/theme";
 import { themeListenerMiddleware } from "../features/theme/theme-middleware";
-import { modalSlice } from "../features/modal";
 
 const persistConfig = {
   key: "root",
@@ -35,7 +35,7 @@ const rootReducer = combineSlices(
   themeSlice,
   sizeSlice,
   languageSlice,
-  modalSlice
+  modalSlice,
 );
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

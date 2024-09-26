@@ -1,7 +1,7 @@
 import { useAppDispatch } from "../../app/hooks";
+import MenuIcon from "../../assets/icon-menu.svg";
 import { openModal } from "../../features/modal";
 import { Icon } from "../Icon";
-import MenuIcon from "../../assets/icon-menu.svg";
 
 export const Hamburger = () => {
   const dispatch = useAppDispatch();

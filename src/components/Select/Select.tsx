@@ -1,5 +1,5 @@
-import styles from "./Select.module.scss";
 import Image from "../../assets/icon-select.svg";
+import styles from "./Select.module.scss";
 
 export type Option = {
   value: string;

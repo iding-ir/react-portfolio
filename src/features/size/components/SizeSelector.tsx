@@ -1,10 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
 import { useAppDispatch } from "../../../app/hooks";
+import { Select } from "../../../components/Select";
 import { SIZES, Size } from "../size";
 import { selectSize, setSize } from "../size-slice";
-import { Select } from "../../../components/Select";
-import { useTranslation } from "react-i18next";
 
 export const SizeSelector = () => {
   const { t } = useTranslation();

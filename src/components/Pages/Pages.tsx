@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import { routes } from "../../routes";
+
 import { usePersist } from "../../hooks/use-persist";
+import { routes } from "../../routes";
 
 export const Pages = () => {
   usePersist();

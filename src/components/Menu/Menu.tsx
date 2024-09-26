@@ -1,10 +1,11 @@
-import { useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import clsx from "clsx";
-import { Icon } from "../Icon";
-import { routes } from "../../routes";
+import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
+
 import MoreIcon from "../../assets/icon-more.svg";
+import { routes } from "../../routes";
+import { Icon } from "../Icon";
 import styles from "./Menu.module.scss";
 
 export const Menu = () => {

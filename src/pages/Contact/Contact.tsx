@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 
 import { Footer } from "../../components/Footer";
+import { Header } from "../../components/Header";
+import { Main } from "../../components/Main";
 import { Navigation } from "../../components/Navigation";
 import { Layout } from "../../layout";
-import { Main } from "../../components/Main";
-import { Header } from "../../components/Header";
 
 export const Contact = () => {
   const { t } = useTranslation();

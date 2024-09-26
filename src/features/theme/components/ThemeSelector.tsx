@@ -1,10 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
 import { useAppDispatch } from "../../../app/hooks";
+import { Select } from "../../../components/Select";
 import { THEMES, Theme } from "../theme";
 import { selectTheme, setTheme } from "../theme-slice";
-import { Select } from "../../../components/Select";
-import { useTranslation } from "react-i18next";
 
 export const ThemeSelector = () => {
   const { t } = useTranslation();

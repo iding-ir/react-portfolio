@@ -1,8 +1,8 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit";
 
-import { setTheme } from "./theme-slice";
 import { setDataAttribute } from "../../utils/set-data-attribute";
 import { Theme } from "./theme";
+import { setTheme } from "./theme-slice";
 
 export const themeListenerMiddleware = createListenerMiddleware();
 

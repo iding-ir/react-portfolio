@@ -9,41 +9,14 @@
   background-color: var(--color-light);
   z-index: 100;
 
-  &.fade {
-    animation: fade-animation;
-  }
-
-  &.slide {
-    animation: slide-animation;
-  }
-
   &.active {
+    animation: slide;
     animation-duration: var(--page-transition-duration);
     animation-iteration-count: 1;
   }
 }
 
-@keyframes fade-animation {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  30% {
-    opacity: 1;
-    visibility: visible;
-  }
-  70% {
-    opacity: 1;
-    visibility: visible;
-    background-color: var(--color-lighter);
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-@keyframes slide-animation {
+@keyframes slide {
   0% {
     width: 0;
     opacity: 0;

@@ -1,8 +1,8 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit";
 
-import { setSize } from "./size-slice";
 import { setDataAttribute } from "../../utils/set-data-attribute";
 import { Size } from "./size";
+import { setSize } from "./size-slice";
 
 export const sizeListenerMiddleware = createListenerMiddleware();
 

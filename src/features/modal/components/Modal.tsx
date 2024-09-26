@@ -1,12 +1,13 @@
-import { useSelector } from "react-redux";
 import clsx from "clsx";
+import { useSelector } from "react-redux";
+
 import { useAppDispatch } from "../../../app/hooks";
-import { closeModal, selectModal } from "../modal-slice";
-import { LanguageSelector } from "../../language";
-import { ThemeSelector } from "../../theme";
-import { SizeSelector } from "../../size";
-import { Icon } from "../../../components/Icon";
 import CloseIcon from "../../../assets/icon-close.svg";
+import { Icon } from "../../../components/Icon";
+import { LanguageSelector } from "../../language";
+import { SizeSelector } from "../../size";
+import { ThemeSelector } from "../../theme";
+import { closeModal, selectModal } from "../modal-slice";
 import styles from "./Modal.module.scss";
 
 export const Modal = () => {

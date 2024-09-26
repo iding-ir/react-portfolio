@@ -1,10 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
 import { useAppDispatch } from "../../../app/hooks";
+import { Select } from "../../../components/Select";
 import { LANGUAGES, Language } from "../language";
 import { selectLanguage, setLanguage } from "../language-slice";
-import { Select } from "../../../components/Select";
-import { useTranslation } from "react-i18next";
 
 export const LanguageSelector = () => {
   const { t } = useTranslation();

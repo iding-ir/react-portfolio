@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
-import styles from "./Section.module.scss";
 import { Modal } from "../../features/modal";
+import styles from "./Section.module.scss";
 
 export const Section = ({ children }: { children: ReactNode }) => {
   return (
