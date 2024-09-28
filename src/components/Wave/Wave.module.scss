@@ -35,7 +35,7 @@
       opacity: 0.05;
 
       &:hover {
-        fill: var(--color-primary-light);
+        fill: var(--color-primary-md);
         opacity: 0.5;
       }
     }
@@ -47,7 +47,7 @@
       opacity: 0.5;
 
       &:hover {
-        fill: var(--color-secondary-light);
+        fill: var(--color-secondary-md);
         opacity: 0.5;
       }
     }
@@ -59,7 +59,7 @@
       opacity: 0.4;
 
       &:hover {
-        fill: var(--color-primary-dark);
+        fill: var(--color-primary-lg);
         opacity: 0.5;
       }
     }
@@ -71,7 +71,7 @@
       opacity: 0.7;
 
       &:hover {
-        fill: var(--color-secondary-dark);
+        fill: var(--color-secondary-lg);
         opacity: 0.5;
       }
     }

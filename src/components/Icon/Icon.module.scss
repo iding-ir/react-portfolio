@@ -31,57 +31,39 @@
   }
 
   &.normal {
-    color: var(--color-primary-dark);
     background-color: var(--color-light);
 
     * {
-      fill: var(--color-primary-dark);
-    }
-
-    .text {
-      color: var(--color-primary-dark);
+      fill: var(--color-primary-lg);
+      color: var(--color-primary-lg);
     }
 
     &.active,
-    &:active,
     &:hover {
-      color: var(--color-lighter);
-      background-color: var(--color-secondary-light);
+      background-color: var(--color-secondary-md);
 
       * {
         fill: var(--color-lighter);
-      }
-
-      .text {
         color: var(--color-lighter);
       }
     }
   }
 
   &.reverse {
-    color: var(--color-lighter);
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-primary-md);
 
     * {
       fill: var(--color-lighter);
-    }
-
-    .text {
       color: var(--color-lighter);
     }
 
     &.active,
-    &:active,
     &:hover {
-      color: var(--color-light);
-      background-color: var(--color-secondary-dark);
+      background-color: var(--color-secondary-sm);
 
       * {
-        fill: var(--color-light);
-      }
-
-      .text {
-        color: var(--color-light);
+        fill: var(--color-darker);
+        color: var(--color-darker);
       }
     }
   }

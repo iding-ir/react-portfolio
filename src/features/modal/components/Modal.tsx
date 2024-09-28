@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 
 import { useAppDispatch } from "../../../app/hooks";
 import CloseIcon from "../../../assets/icon-close.svg";
-import { Bubble } from "../../../components/Bubble";
 import { Icon } from "../../../components/Icon";
 import { LanguageSelector } from "../../language";
 import { SizeSelector } from "../../size";
@@ -36,8 +35,6 @@ export const Modal = () => {
           <CloseIcon />
         </Icon>
       </div>
-
-      <Bubble />
     </div>
   );
 };

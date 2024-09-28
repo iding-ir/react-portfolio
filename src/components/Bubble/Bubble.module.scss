@@ -1,10 +1,10 @@
-$size: 70vmin;
+$size: 100vmin;
 $speed: 30s;
 
 .container {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 100%;
+  left: 100%;
   width: $size;
   height: $size;
   transform: translate(-50%, -50%);
@@ -26,7 +26,7 @@ $speed: 30s;
 
       &:hover {
         opacity: 0.3;
-        background: var(--color-primary-light);
+        background: var(--color-primary-md);
         animation-play-state: paused;
 
         + .bubble {
@@ -54,11 +54,11 @@ $speed: 30s;
 
       &:hover {
         opacity: 0.4;
-        background: var(--color-secondary-dark);
+        background: var(--color-secondary-lg);
         animation-play-state: paused;
 
         + .bubble {
-          opacity: 0.2;
+          opacity: 0.3;
           background: var(--color-dark);
         }
       }
@@ -77,7 +77,7 @@ $speed: 30s;
 
       &:hover {
         opacity: 0.5;
-        background: var(--color-primary-dark);
+        background: var(--color-primary-lg);
         animation-play-state: paused;
       }
     }
