@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 
 import MoreIcon from "../../assets/icon-more.svg";
 import { useRoutes } from "../../hooks/use-routes";
+import { ROUTE_TYPES } from "../../types";
 import { Icon } from "../Icon";
 import { Svg } from "../Svg";
 import styles from "./Menu.module.scss";
@@ -43,7 +44,13 @@ export const Menu = () => {
     resizeObserver.observe(iconRef.current);
   }, []);
 
-  const items = routes.filter((route) => route.inMenu);
+  if (!routes) {
+    return null;
+  }
+
+  const items = routes.filter(
+    (route) => route.type === ROUTE_TYPES.NORMAL_PAGE,
+  );
   const isPrimary = (index: number) => (index + 2) * iconSize < containerSize;
   const hasSecondary = () => items.some((_, index) => !isPrimary(index));
   const visibleItems = items.filter((_, index) => isPrimary(index));

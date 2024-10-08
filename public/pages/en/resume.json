@@ -1,1 +1,4 @@
-{ "title": "Resume", "content": "This is a simple Resume page." }
+{
+  "title": "My resume",
+  "content": "This is a simple Resume page."
+}

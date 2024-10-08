@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { useAppSelector } from "../app/hooks";
 import { selectLanguage } from "../features/language";
 import { useGetRoutesByLanguageQuery } from "../features/services/pages";
-import { RouteType } from "../types";
+import { Data } from "../types";
 
 export const useRoutes = () => {
   const { pathname } = useLocation();
@@ -13,8 +13,7 @@ export const useRoutes = () => {
     pathname,
   });
 
-  const routes = Object.values(data?.routes || {}) as RouteType[];
-  const footer = data?.footer || ({} as string);
+  const { routes, footer } = (data || {}) as Data;
 
   return {
     routes,

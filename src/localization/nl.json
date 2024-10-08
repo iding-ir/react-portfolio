@@ -1,4 +1,10 @@
 {
+  "pages": {
+    "noMatch": {
+      "title": "[nl] 404",
+      "content": "[nl] Page not found!"
+    }
+  },
   "selects": {
     "language": {
       "en": "[nl] English",
