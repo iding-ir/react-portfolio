@@ -1,7 +1,7 @@
 export enum SIZES {
-  SM = "SM",
-  MD = "MD",
-  LG = "LG",
+  SM = "sm",
+  MD = "md",
+  LG = "lg",
 }
 
 export const DEFAULT_SIZE = SIZES.MD;

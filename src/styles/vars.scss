@@ -63,7 +63,7 @@ html {
 
   --page-transition-duration: 1500ms;
 
-  &[data-theme="DARK"] {
+  &[data-theme="dark"] {
     // Colors
     --color-primary-sm: #{$color-primary-dark-sm};
     --color-secondary-sm: #{$color-secondary-dark-sm};
@@ -84,11 +84,11 @@ html {
     --color-grey-lg: #b0bec5;
   }
 
-  &[data-size="SM"] {
+  &[data-size="sm"] {
     --size-ratio: #{$size-ratio-sm};
   }
 
-  &[data-size="LG"] {
+  &[data-size="lg"] {
     --size-ratio: #{$size-ratio-lg};
   }
 }

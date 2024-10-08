@@ -1,6 +1,6 @@
 export enum THEMES {
-  LIGHT = "LIGHT",
-  DARK = "DARK",
+  LIGHT = "light",
+  DARK = "dark",
 }
 
 export const DEFAULT_THEME = THEMES.LIGHT;

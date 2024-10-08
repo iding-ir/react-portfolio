@@ -23,13 +23,13 @@
       "nl": "Dutch"
     },
     "theme": {
-      "LIGHT": "Light",
-      "DARK": "Dark"
+      "light": "Light",
+      "dark": "Dark"
     },
     "size": {
-      "SM": "Small",
-      "MD": "Medium",
-      "LG": "Large"
+      "sm": "Small",
+      "md": "Medium",
+      "lg": "Large"
     }
   },
   "footer": "2016-2024"
