@@ -19,8 +19,8 @@
   },
   "selects": {
     "language": {
-      "EN": "[nl] English",
-      "NL": "[nl] Dutch"
+      "en": "[nl] English",
+      "nl": "[nl] Dutch"
     },
     "theme": {
       "LIGHT": "[nl] Light",

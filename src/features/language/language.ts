@@ -1,6 +1,6 @@
 export enum LANGUAGES {
-  EN = "EN",
-  NL = "NL",
+  EN = "en",
+  NL = "nl",
 }
 
 export const DEFAULT_LANGUAGE = LANGUAGES.EN;

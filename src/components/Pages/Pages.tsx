@@ -8,8 +8,8 @@ export const Pages = () => {
 
   return (
     <Routes>
-      {routes.map((route) => (
-        <Route key={route.path} path={route.path} element={route.component} />
+      {routes.map(({ path, component }) => (
+        <Route key={path} path={path} element={component} />
       ))}
     </Routes>
   );
