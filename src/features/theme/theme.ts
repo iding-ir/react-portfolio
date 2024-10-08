@@ -3,7 +3,7 @@ export enum THEMES {
   DARK = "dark",
 }
 
-export const DEFAULT_THEME = THEMES.LIGHT;
-export const FALLBACK_THEME = THEMES.LIGHT;
+export const DEFAULT_THEME = THEMES.DARK;
+export const FALLBACK_THEME = THEMES.DARK;
 
 export type Theme = keyof typeof THEMES;

@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
 import { useAppDispatch } from "../../../app/hooks";
+import Icon from "../../../assets/icon-theme.svg";
 import { Select } from "../../../components/Select";
 import { THEMES, Theme } from "../theme";
 import { selectTheme, setTheme } from "../theme-slice";
@@ -20,5 +21,12 @@ export const ThemeSelector = () => {
     dispatch(setTheme(event.target.value as Theme));
   };
 
-  return <Select items={items} value={theme} onChange={handleChange} />;
+  return (
+    <Select
+      items={items}
+      value={theme}
+      icon={<Icon />}
+      onChange={handleChange}
+    />
+  );
 };

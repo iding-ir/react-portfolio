@@ -20,6 +20,10 @@ html {
   --color-grey-md: #cfd8dc;
   --color-grey-lg: #b0bec5;
 
+  --color-fade-sm: rgba(120, 120, 120, 0.2);
+  --color-fade-md: rgba(120, 120, 120, 0.4);
+  --color-fade-lg: rgba(120, 120, 120, 0.6);
+
   --color-transparent: rgba(0, 0, 0, 0);
 
   // Font sizes
@@ -46,9 +50,9 @@ html {
   --border-thickness-md: 0.2rem;
   --border-thickness-lg: 0.3rem;
 
-  --transition-sm: 0.2s ease-in-out;
-  --transition-md: 0.3s ease-in-out;
-  --transition-lg: 0.5s ease-in-out;
+  --transition-sm: 0.1s;
+  --transition-md: 0.3s;
+  --transition-lg: 0.5s;
 
   --box-shadow-sm: 0px 0px 3px rgba(#{$dark}, #{$dark}, #{$dark}, 0.1);
   --box-shadow-md: 0px 0px 5px rgba(#{$dark}, #{$dark}, #{$dark}, 0.1);

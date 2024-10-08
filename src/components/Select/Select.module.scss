@@ -3,34 +3,58 @@
   width: 20rem;
   z-index: 10;
 
+  &:hover {
+    .icon {
+      * {
+        fill: var(--color-secondary-md);
+      }
+    }
+  }
+
   .select {
     padding: var(--spacing-md);
     width: 100%;
     height: 100%;
+    padding-right: calc(var(--icon-size-sm) + var(--spacing-md));
+    color: var(--color-dark);
     background-color: var(--color-light);
     border: none;
     border-radius: var(--border-radius);
-    color: var(--color-dark);
     cursor: pointer;
     appearance: none;
+    outline: none;
 
-    &:focus,
-    &:hover {
+    &:focus {
+      background-color: var(--color-fade-md);
+
       ~ .icon {
         * {
           fill: var(--color-secondary-md);
         }
       }
     }
+
+    option {
+      background-color: var(--color-light);
+    }
   }
 
   .icon {
     position: absolute;
     top: 50%;
-    right: var(--spacing-sm);
     width: var(--icon-size-sm);
     height: var(--icon-size-sm);
     transform: translateY(-50%);
+    pointer-events: none;
+    touch-action: none;
+
+    &.left {
+      left: var(--spacing-sm);
+    }
+
+    &.right {
+      right: var(--spacing-sm);
+    }
 
     svg {
       width: 100%;
@@ -39,6 +63,11 @@
 
     * {
       fill: var(--color-primary-md);
+      transition: var(--transition-sm);
+    }
+
+    ~ .select {
+      padding-left: calc(var(--icon-size-sm) + var(--spacing-md));
     }
   }
 }

@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
 import { useAppDispatch } from "../../../app/hooks";
+import Icon from "../../../assets/icon-language.svg";
 import { Select } from "../../../components/Select";
 import { LANGUAGES, Language } from "../language";
 import { selectLanguage, setLanguage } from "../language-slice";
@@ -20,5 +21,12 @@ export const LanguageSelector = () => {
     dispatch(setLanguage(event.target.value as Language));
   };
 
-  return <Select items={items} value={language} onChange={handleChange} />;
+  return (
+    <Select
+      items={items}
+      value={language}
+      icon={<Icon />}
+      onChange={handleChange}
+    />
+  );
 };
