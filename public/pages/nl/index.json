@@ -1,0 +1,35 @@
+{
+  "routes": {
+    "home": {
+      "path": "/home",
+      "title": "Home",
+      "icon": "/assets/icons/icon-home.svg",
+      "inMenu": false
+    },
+    "noMatch": {
+      "path": "/noMatch",
+      "title": "No Match",
+      "icon": "/assets/icons/icon-noMatch.svg",
+      "inMenu": false
+    },
+    "about": {
+      "path": "/about",
+      "title": "About",
+      "icon": "/assets/icons/icon-about.svg",
+      "inMenu": true
+    },
+    "contact": {
+      "path": "/contact",
+      "title": "Contact",
+      "icon": "/assets/icons/icon-contact.svg",
+      "inMenu": true
+    },
+    "resume": {
+      "path": "/resume",
+      "title": "Resume",
+      "icon": "/assets/icons/icon-resume.svg",
+      "inMenu": true
+    }
+  },
+  "footer": "2016-2024"
+}

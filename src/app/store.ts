@@ -19,7 +19,7 @@ import storage from "redux-persist/lib/storage";
 import { languageSlice } from "../features/language";
 import { languageListenerMiddleware } from "../features/language/language-middleware";
 import { modalSlice } from "../features/modal";
-import { markdownApi } from "../features/services/markdown";
+import { pageApi } from "../features/services/pages";
 import { sizeSlice } from "../features/size";
 import { sizeListenerMiddleware } from "../features/size/size-middleware";
 import { themeSlice } from "../features/theme";
@@ -37,7 +37,7 @@ const rootReducer = combineSlices(
   sizeSlice,
   languageSlice,
   modalSlice,
-  markdownApi,
+  pageApi,
 );
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -50,7 +50,7 @@ export const store = configureStore({
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     })
-      .prepend(markdownApi.middleware)
+      .prepend(pageApi.middleware)
       .prepend(languageListenerMiddleware.middleware)
       .prepend(themeListenerMiddleware.middleware)
       .prepend(sizeListenerMiddleware.middleware),

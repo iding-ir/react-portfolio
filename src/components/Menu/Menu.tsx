@@ -1,21 +1,21 @@
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 
 import MoreIcon from "../../assets/icon-more.svg";
-import { routes } from "../../routes";
+import { useRoutes } from "../../hooks/use-routes";
 import { Icon } from "../Icon";
+import { Svg } from "../Svg";
 import styles from "./Menu.module.scss";
 
 export const Menu = () => {
-  const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const iconRef = useRef<HTMLLIElement>(null);
   const [isClosed, setIsClosed] = useState(true);
   const [containerSize, setContainerSize] = useState(0);
   const [iconSize, setIconSize] = useState(0);
   const { pathname } = useLocation();
+  const { routes } = useRoutes();
 
   useEffect(() => {
     if (!containerRef.current) {
@@ -43,7 +43,7 @@ export const Menu = () => {
     resizeObserver.observe(iconRef.current);
   }, []);
 
-  const items = Object.values(routes).filter((route) => route.inMenu);
+  const items = routes.filter((route) => route.inMenu);
   const isPrimary = (index: number) => (index + 2) * iconSize < containerSize;
   const hasSecondary = () => items.some((_, index) => !isPrimary(index));
   const visibleItems = items.filter((_, index) => isPrimary(index));
@@ -59,9 +59,12 @@ export const Menu = () => {
         {visibleItems.map(({ path, title, icon }) => (
           <li key={path}>
             <Link to={path}>
-              <Icon animated active={path === pathname} text={t(title)}>
-                {icon}
-              </Icon>
+              <Svg
+                animated
+                active={path === pathname}
+                text={title}
+                src={icon}
+              />
             </Link>
           </li>
         ))}
@@ -77,9 +80,12 @@ export const Menu = () => {
         {collapsedItems.map(({ path, title, icon }) => (
           <li className={collapsedClassNames} key={path}>
             <Link to={path}>
-              <Icon animated active={path === pathname} text={t(title)}>
-                {icon}
-              </Icon>
+              <Svg
+                animated
+                active={path === pathname}
+                text={title}
+                src={icon}
+              />
             </Link>
           </li>
         ))}

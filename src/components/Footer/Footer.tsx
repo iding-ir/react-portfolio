@@ -1,9 +1,8 @@
-import { useTranslation } from "react-i18next";
-
+import { useRoutes } from "../../hooks/use-routes";
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {
-  const { t } = useTranslation();
+  const { footer } = useRoutes();
 
-  return <footer className={styles.container}>{t("footer")}</footer>;
+  return <footer className={styles.container}>{footer}</footer>;
 };

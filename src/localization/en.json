@@ -1,22 +1,4 @@
 {
-  "pages": {
-    "about": {
-      "title": "About",
-      "content": "This is a simple about page"
-    },
-    "resume": {
-      "title": "Resume",
-      "content": "This is a simple resume page"
-    },
-    "contact": {
-      "title": "Contact",
-      "content": "This is a simple contact page"
-    },
-    "noMatch": {
-      "title": "404",
-      "content": "Page not found"
-    }
-  },
   "selects": {
     "language": {
       "en": "English",
@@ -31,6 +13,5 @@
       "md": "Medium",
       "lg": "Large"
     }
-  },
-  "footer": "2016-2024"
+  }
 }
