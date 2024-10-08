@@ -16,7 +16,7 @@ export const Menu = () => {
   const [containerSize, setContainerSize] = useState(0);
   const [iconSize, setIconSize] = useState(0);
   const { pathname } = useLocation();
-  const { routes } = useRoutes();
+  const { routes, isLoading } = useRoutes();
 
   useEffect(() => {
     if (!containerRef.current) {
@@ -44,7 +44,7 @@ export const Menu = () => {
     resizeObserver.observe(iconRef.current);
   }, []);
 
-  if (!routes) {
+  if (isLoading) {
     return null;
   }
 

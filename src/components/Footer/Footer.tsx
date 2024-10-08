@@ -2,9 +2,9 @@ import { useRoutes } from "../../hooks/use-routes";
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {
-  const { footer } = useRoutes();
+  const { footer, isLoading } = useRoutes();
 
-  if (!footer) {
+  if (isLoading) {
     return null;
   }
 

@@ -14,10 +14,6 @@ export const Pages = () => {
     return <Layout.Loader />;
   }
 
-  if (!routes) {
-    return null;
-  }
-
   return (
     <Routes>
       {routes.map(({ path }) => (
