@@ -8,7 +8,7 @@ export type PageType = {
   title: string;
   file: string;
   icon: string;
-  path: string;
+  slug: string;
 };
 
 export type LinkType = {

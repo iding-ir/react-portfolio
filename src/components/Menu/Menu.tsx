@@ -1,9 +1,11 @@
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import MoreIcon from "../../assets/icon-more.svg";
 import { useData } from "../../hooks/use-data";
+import { usePage } from "../../hooks/use-page";
+import { getPath } from "../../methods/get-path";
 import { Icon } from "../Icon";
 import { Svg } from "../Svg";
 import styles from "./Menu.module.scss";
@@ -14,8 +16,8 @@ export const Menu = () => {
   const [isClosed, setIsClosed] = useState(true);
   const [containerSize, setContainerSize] = useState(0);
   const [iconSize, setIconSize] = useState(0);
-  const { pathname } = useLocation();
-  const { pages, isLoading } = useData();
+  const { pages } = useData();
+  const { page } = usePage();
 
   useEffect(() => {
     if (!containerRef.current) {
@@ -43,10 +45,6 @@ export const Menu = () => {
     resizeObserver.observe(iconRef.current);
   }, []);
 
-  if (isLoading) {
-    return null;
-  }
-
   const isPrimary = (index: number) => (index + 2) * iconSize < containerSize;
   const hasSecondary = () => pages.some((_, index) => !isPrimary(index));
   const visibleItems = pages.filter((_, index) => isPrimary(index));
@@ -59,12 +57,12 @@ export const Menu = () => {
   return (
     <div className={styles.container} ref={containerRef}>
       <ul className={styles.primary}>
-        {visibleItems.map(({ path, title, icon }) => (
-          <li key={path}>
-            <Link to={path}>
+        {visibleItems.map(({ slug, title, icon }) => (
+          <li key={slug}>
+            <Link to={getPath({ slug })}>
               <Svg
                 animated
-                active={path === pathname}
+                active={slug === page.slug}
                 text={title}
                 src={icon}
               />
@@ -80,12 +78,12 @@ export const Menu = () => {
           </Icon>
         </li>
 
-        {collapsedItems.map(({ path, title, icon }) => (
-          <li className={collapsedClassNames} key={path}>
-            <Link to={path}>
+        {collapsedItems.map(({ slug, title, icon }) => (
+          <li className={collapsedClassNames} key={slug}>
+            <Link to={getPath({ slug })}>
               <Svg
                 animated
-                active={path === pathname}
+                active={slug === page.slug}
                 text={title}
                 src={icon}
               />

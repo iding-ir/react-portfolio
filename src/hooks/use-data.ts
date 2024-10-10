@@ -1,25 +1,15 @@
-import { useLocation } from "react-router-dom";
-
 import { useAppSelector } from "../app/hooks";
 import { selectLanguage } from "../features/language";
-import { useGetDataByLanguageQuery } from "../features/services/pages";
+import { useGetDataQuery } from "../features/services/data";
 import { Data } from "../types";
 
 export const useData = () => {
-  const { pathname } = useLocation();
   const language = useAppSelector(selectLanguage);
-  const { data, isLoading, error } = useGetDataByLanguageQuery({
-    language,
-    pathname,
-  });
+  const { data, isLoading, isError } = useGetDataQuery({ language });
 
-  const { pages, links, footer } = (data || {}) as Data;
+  if (isError) {
+    throw new Error("useData: error fetching data");
+  }
 
-  return {
-    pages,
-    links,
-    footer,
-    isLoading,
-    error,
-  };
+  return { ...(data as Data), isLoading };
 };

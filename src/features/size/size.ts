@@ -1,10 +1,10 @@
 export enum SIZES {
-  SM = "sm",
-  MD = "md",
-  LG = "lg",
+  sm = "sm",
+  md = "md",
+  lg = "lg",
 }
 
-export const DEFAULT_SIZE = SIZES.MD;
-export const FALLBACK_SIZE = SIZES.MD;
+export const DEFAULT_SIZE = SIZES.md;
+export const FALLBACK_SIZE = SIZES.md;
 
 export type Size = keyof typeof SIZES;

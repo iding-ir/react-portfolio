@@ -9,9 +9,13 @@ import { useData } from "../hooks/use-data";
 import { usePage } from "../hooks/use-page";
 import { Layout } from "../layout";
 
-export const DragonFly = ({ index }: { index: number }) => {
-  const { title, content, isLoading } = usePage({ index });
+export const DragonFly = () => {
   const { links } = useData();
+  const {
+    markdown,
+    page: { title },
+    isLoading,
+  } = usePage();
 
   if (isLoading) {
     return <Layout.Loader />;
@@ -31,7 +35,7 @@ export const DragonFly = ({ index }: { index: number }) => {
 
       <Layout.Main>
         <Main>
-          <Markdown>{content}</Markdown>
+          <Markdown>{markdown}</Markdown>
         </Main>
       </Layout.Main>
 

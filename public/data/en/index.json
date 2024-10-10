@@ -4,19 +4,19 @@
       "title": "About",
       "file": "./about.md",
       "icon": "/assets/icons/icon-about.svg",
-      "path": "/about"
+      "slug": "about"
     },
     {
       "title": "Contact",
       "file": "./contact.md",
       "icon": "/assets/icons/icon-contact.svg",
-      "path": "/contact"
+      "slug": "contact"
     },
     {
       "title": "Resume",
       "file": "./resume.md",
       "icon": "/assets/icons/icon-resume.svg",
-      "path": "/resume"
+      "slug": "resume"
     }
   ],
   "links": [

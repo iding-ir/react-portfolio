@@ -11,10 +11,10 @@ import nl from "./nl.json";
 
 i18n.use(initReactI18next).init({
   resources: {
-    [LANGUAGES.EN]: {
+    [LANGUAGES.en]: {
       translation: en,
     },
-    [LANGUAGES.NL]: {
+    [LANGUAGES.nl]: {
       translation: nl,
     },
   },
