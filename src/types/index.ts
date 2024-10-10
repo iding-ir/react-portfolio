@@ -1,24 +1,19 @@
 export type Data = {
-  routes: RouteType[];
+  pages: PageType[];
+  links: LinkType[];
   footer: string;
-};
-
-export type RouteType = {
-  type: ROUTE_TYPE;
-  path: string;
-  title: string;
-  content: string;
-  icon?: string;
 };
 
 export type PageType = {
   title: string;
-  content: string;
+  file: string;
+  icon: string;
+  path: string;
 };
 
-export enum ROUTE_TYPES {
-  PAGE = "PAGE",
-  LINK = "LINK",
-}
-
-export type ROUTE_TYPE = keyof typeof ROUTE_TYPES;
+export type LinkType = {
+  title: string;
+  icon: string;
+  url: string;
+  ariaLabel?: string;
+};

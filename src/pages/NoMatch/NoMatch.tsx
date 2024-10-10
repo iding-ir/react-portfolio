@@ -20,7 +20,7 @@ export const NoMatch = () => {
       </Layout.Header>
 
       <Layout.Main>
-        <Main content={t("pages.noMatch.content")} />
+        <Main>{t("pages.noMatch.content")}</Main>
       </Layout.Main>
 
       <Layout.Footer>

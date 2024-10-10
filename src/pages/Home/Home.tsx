@@ -1,13 +1,13 @@
 import { Navigate } from "react-router-dom";
 
-import { useRoutes } from "../../hooks/use-routes";
+import { useData } from "../../hooks/use-data";
 
 export const Home = () => {
-  const { routes, isLoading } = useRoutes();
+  const { pages, isLoading } = useData();
 
   if (isLoading) {
     return null;
   }
 
-  return <Navigate to={routes[0].path} />;
+  return <Navigate to={pages[0].path} />;
 };

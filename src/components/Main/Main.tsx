@@ -1,11 +1,13 @@
+import { ReactNode } from "react";
+
 import { PageTransition } from "../PageTransition";
 import { Wave } from "../Wave";
 import styles from "./Main.module.scss";
 
-export const Main = ({ content }: { content: string }) => {
+export const Main = ({ children }: { children: ReactNode }) => {
   return (
     <main className={styles.container}>
-      {content}
+      {children}
 
       <PageTransition />
 

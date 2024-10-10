@@ -1,19 +1,18 @@
-import { useLocation } from "react-router-dom";
-
 import { useAppSelector } from "../app/hooks";
 import { selectLanguage } from "../features/language";
-import { useGetPageByPathQuery } from "../features/services/pages";
-import { PageType } from "../types";
+import { useGetPageContentByFileQuery } from "../features/services/pages";
+import { useData } from "./use-data";
 
-export const usePage = () => {
-  const { pathname } = useLocation();
+export const usePage = ({ index }: { index: number }) => {
   const language = useAppSelector(selectLanguage);
-  const { data, isLoading } = useGetPageByPathQuery({
+  const { pages } = useData();
+  const { title, file } = pages[index];
+  const { data, isLoading } = useGetPageContentByFileQuery({
     language,
-    pathname,
+    file,
   });
 
-  const { title, content } = (data || {}) as PageType;
+  const content = data as string;
 
   return {
     title,

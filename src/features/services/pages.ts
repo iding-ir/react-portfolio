@@ -10,13 +10,17 @@ export const pageApi = createApi({
   },
   tagTypes: [],
   endpoints: (builder) => ({
-    getRoutesByLanguage: builder.query({
-      query: ({ language }) => `pages/${language}/index.json`,
+    getDataByLanguage: builder.query({
+      query: ({ language }) => `data/${language}/index.json`,
     }),
-    getPageByPath: builder.query({
-      query: ({ language, pathname }) => `pages/${language}${pathname}.json`,
+    getPageContentByFile: builder.query({
+      query: ({ language, file }) => ({
+        url: `data/${language}/${file}`,
+        responseHandler: "text",
+      }),
     }),
   }),
 });
 
-export const { useGetPageByPathQuery, useGetRoutesByLanguageQuery } = pageApi;
+export const { useGetPageContentByFileQuery, useGetDataByLanguageQuery } =
+  pageApi;

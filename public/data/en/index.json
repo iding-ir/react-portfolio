@@ -1,0 +1,35 @@
+{
+  "pages": [
+    {
+      "title": "About",
+      "file": "./about.md",
+      "icon": "/assets/icons/icon-about.svg",
+      "path": "/about"
+    },
+    {
+      "title": "Contact",
+      "file": "./contact.md",
+      "icon": "/assets/icons/icon-contact.svg",
+      "path": "/contact"
+    },
+    {
+      "title": "Resume",
+      "file": "./resume.md",
+      "icon": "/assets/icons/icon-resume.svg",
+      "path": "/resume"
+    }
+  ],
+  "links": [
+    {
+      "title": "GitHub",
+      "icon": "/assets/icons/icon-github.svg",
+      "url": "https://github.com/iding-ir"
+    },
+    {
+      "title": "LinkedIn",
+      "icon": "/assets/icons/icon-linkedin.svg",
+      "url": "https://www.linkedin.com/in/aydin-ghane/"
+    }
+  ],
+  "footer": "2016-2024"
+}

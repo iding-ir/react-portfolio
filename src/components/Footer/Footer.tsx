@@ -1,8 +1,8 @@
-import { useRoutes } from "../../hooks/use-routes";
+import { useData } from "../../hooks/use-data";
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {
-  const { footer, isLoading } = useRoutes();
+  const { footer, isLoading } = useData();
 
   if (isLoading) {
     return null;

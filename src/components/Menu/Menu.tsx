@@ -3,8 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import MoreIcon from "../../assets/icon-more.svg";
-import { useRoutes } from "../../hooks/use-routes";
-import { ROUTE_TYPES } from "../../types";
+import { useData } from "../../hooks/use-data";
 import { Icon } from "../Icon";
 import { Svg } from "../Svg";
 import styles from "./Menu.module.scss";
@@ -16,7 +15,7 @@ export const Menu = () => {
   const [containerSize, setContainerSize] = useState(0);
   const [iconSize, setIconSize] = useState(0);
   const { pathname } = useLocation();
-  const { routes, isLoading } = useRoutes();
+  const { pages, isLoading } = useData();
 
   useEffect(() => {
     if (!containerRef.current) {
@@ -48,7 +47,6 @@ export const Menu = () => {
     return null;
   }
 
-  const pages = routes.filter(({ type }) => type === ROUTE_TYPES.PAGE);
   const isPrimary = (index: number) => (index + 2) * iconSize < containerSize;
   const hasSecondary = () => pages.some((_, index) => !isPrimary(index));
   const visibleItems = pages.filter((_, index) => isPrimary(index));
