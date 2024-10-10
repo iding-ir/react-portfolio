@@ -9,25 +9,53 @@
   height: var(--icon-size-lg);
   overflow: hidden;
   cursor: pointer;
-  transition: var(--transition-sm);
+  transition: var(--transition-md);
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 30%;
+
+    background-color: var(--color-lighter);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  .text {
+    font-size: var(--font-size-xs);
+  }
 
   &.sm {
     width: var(--icon-size-sm);
     height: var(--icon-size-sm);
+
+    .icon {
+      width: 90%;
+      height: 90%;
+    }
   }
 
   &.md {
     width: var(--icon-size-md);
     height: var(--icon-size-md);
+
+    .icon {
+      width: 60%;
+      height: 60%;
+    }
   }
 
   &.lg {
     width: var(--icon-size-lg);
     height: var(--icon-size-lg);
-  }
 
-  .text {
-    font-size: var(--font-size-xs);
+    .icon {
+      width: 30%;
+      height: 30%;
+    }
   }
 
   &.normal {
@@ -78,15 +106,6 @@
         color: var(--color-darker);
       }
     }
-  }
-
-  .icon {
-    width: 30%;
-    height: 30%;
-    background-color: var(--color-lighter);
-    mask-size: 100%;
-    mask-repeat: no-repeat;
-    mask-position: center;
   }
 
   &.animated:hover {

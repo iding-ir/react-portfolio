@@ -48,13 +48,11 @@ export const Menu = () => {
     return null;
   }
 
-  const items = routes.filter(
-    (route) => route.type === ROUTE_TYPES.NORMAL_PAGE,
-  );
+  const pages = routes.filter(({ type }) => type === ROUTE_TYPES.PAGE);
   const isPrimary = (index: number) => (index + 2) * iconSize < containerSize;
-  const hasSecondary = () => items.some((_, index) => !isPrimary(index));
-  const visibleItems = items.filter((_, index) => isPrimary(index));
-  const collapsedItems = items.filter((_, index) => !isPrimary(index));
+  const hasSecondary = () => pages.some((_, index) => !isPrimary(index));
+  const visibleItems = pages.filter((_, index) => isPrimary(index));
+  const collapsedItems = pages.filter((_, index) => !isPrimary(index));
   const collapsedClassNames = clsx({ [styles.collapsed]: isClosed });
   const moreClassNames = clsx({
     [styles.hidden]: !containerSize || !iconSize || !hasSecondary(),

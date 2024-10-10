@@ -17,8 +17,8 @@ export type PageType = {
 };
 
 export enum ROUTE_TYPES {
-  NORMAL_PAGE = "NORMAL_PAGE",
-  MENU_LINK = "MENU_LINK",
+  PAGE = "PAGE",
+  LINK = "LINK",
 }
 
 export type ROUTE_TYPE = keyof typeof ROUTE_TYPES;

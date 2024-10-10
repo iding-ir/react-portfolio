@@ -9,32 +9,63 @@
   height: var(--icon-size-lg);
   overflow: hidden;
   cursor: pointer;
-  transition: var(--transition-sm);
+  transition: var(--transition-md);
 
-  &.sm {
-    width: var(--icon-size-sm);
-    height: var(--icon-size-sm);
-  }
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 30%;
 
-  &.md {
-    width: var(--icon-size-md);
-    height: var(--icon-size-md);
-  }
-
-  &.lg {
-    width: var(--icon-size-lg);
-    height: var(--icon-size-lg);
+    svg {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .text {
     font-size: var(--font-size-xs);
   }
 
+  &.sm {
+    width: var(--icon-size-sm);
+    height: var(--icon-size-sm);
+
+    .icon {
+      width: 90%;
+      height: 90%;
+    }
+  }
+
+  &.md {
+    width: var(--icon-size-md);
+    height: var(--icon-size-md);
+
+    .icon {
+      width: 60%;
+      height: 60%;
+    }
+  }
+
+  &.lg {
+    width: var(--icon-size-lg);
+    height: var(--icon-size-lg);
+
+    .icon {
+      width: 30%;
+      height: 30%;
+    }
+  }
+
   &.normal {
     background-color: var(--color-light);
 
-    * {
+    .icon * {
       fill: var(--color-primary-lg);
+    }
+
+    .text {
       color: var(--color-primary-lg);
     }
 
@@ -42,8 +73,11 @@
     &:hover {
       background-color: var(--color-secondary-md);
 
-      * {
+      .icon * {
         fill: var(--color-lighter);
+      }
+
+      .text {
         color: var(--color-lighter);
       }
     }
@@ -52,8 +86,11 @@
   &.reverse {
     background-color: var(--color-primary-md);
 
-    * {
+    .icon * {
       fill: var(--color-lighter);
+    }
+
+    .text {
       color: var(--color-lighter);
     }
 
@@ -61,24 +98,18 @@
     &:hover {
       background-color: var(--color-secondary-sm);
 
-      * {
+      .icon * {
         fill: var(--color-darker);
+      }
+
+      .text {
         color: var(--color-darker);
       }
     }
   }
 
-  svg {
-    width: auto;
-    height: 30%;
-
-    * {
-      fill: var(--color-lighter);
-    }
-  }
-
   &.animated:hover {
-    svg {
+    .icon {
       animation: shake 0.5s;
     }
 

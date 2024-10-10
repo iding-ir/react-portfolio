@@ -31,10 +31,10 @@ export const Icon = ({
   });
 
   return (
-    <i className={classNames} onClick={onClick}>
-      {children}
+    <div className={classNames} onClick={onClick}>
+      <span className={styles.icon}>{children}</span>
 
       {text && <span className={styles.text}>{text}</span>}
-    </i>
+    </div>
   );
 };
