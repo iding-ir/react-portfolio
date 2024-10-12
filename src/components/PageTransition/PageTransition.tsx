@@ -24,5 +24,10 @@ export const PageTransition = () => {
     return () => clearTimeout(timeout);
   }, [slug]);
 
-  return <div className={classNames} />;
+  return (
+    <div className={classNames}>
+      <div className={styles.fader} />
+      <div className={styles.slider} />
+    </div>
+  );
 };
