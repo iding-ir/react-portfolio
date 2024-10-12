@@ -1,15 +1,13 @@
 import clsx from "clsx";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-import { usePage } from "../../hooks/use-page";
 import { getCssVariable } from "../../utils/get-css-variable";
 import styles from "./PageTransition.module.scss";
 
 export const PageTransition = () => {
   const [active, setActive] = useState(false);
-  const {
-    page: { slug },
-  } = usePage();
+  const { slug } = useParams();
 
   const classNames = clsx(styles.container, {
     [styles.active]: active,

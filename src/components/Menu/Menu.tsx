@@ -1,10 +1,9 @@
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import MoreIcon from "../../assets/icon-more.svg";
 import { useData } from "../../hooks/use-data";
-import { usePage } from "../../hooks/use-page";
 import { getPath } from "../../methods/get-path";
 import { Icon } from "../Icon";
 import { Svg } from "../Svg";
@@ -17,7 +16,7 @@ export const Menu = () => {
   const [containerSize, setContainerSize] = useState(0);
   const [iconSize, setIconSize] = useState(0);
   const { pages } = useData();
-  const { page } = usePage();
+  const { slug: currentSlug } = useParams();
 
   useEffect(() => {
     if (!containerRef.current) {
@@ -62,7 +61,7 @@ export const Menu = () => {
             <Link to={getPath({ slug })}>
               <Svg
                 animated
-                active={slug === page.slug}
+                active={slug === currentSlug}
                 text={title}
                 src={icon}
               />
@@ -83,7 +82,7 @@ export const Menu = () => {
             <Link to={getPath({ slug })}>
               <Svg
                 animated
-                active={slug === page.slug}
+                active={slug === currentSlug}
                 text={title}
                 src={icon}
               />
