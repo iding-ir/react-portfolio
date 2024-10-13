@@ -1,4 +1,8 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import {
+  Navigate,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
 
 import { HOME_PATH } from "../../constants";
 import { useData } from "../../hooks/use-data";
@@ -6,6 +10,7 @@ import { usePersist } from "../../hooks/use-persist";
 import { Layout } from "../../layout";
 import { getPath } from "../../methods/get-path";
 import { NoMatch } from "../../pages";
+import { ErrorPage } from "../../pages/ErrorPage";
 import { DragonFly } from "../../templates/DragonFly";
 
 export const Pages = () => {
@@ -16,22 +21,23 @@ export const Pages = () => {
     return <Layout.Loader />;
   }
 
-  return (
-    <Routes>
-      {pages.map(({ slug }) => (
-        <Route
-          key={slug}
-          path={getPath({ slug: ":slug" })}
-          element={<DragonFly />}
-        />
-      ))}
+  const router = createBrowserRouter([
+    ...pages.map(() => ({
+      path: getPath({ slug: ":slug" }),
+      element: <DragonFly />,
+      errorElement: <ErrorPage />,
+    })),
+    {
+      path: HOME_PATH,
+      element: <Navigate to={getPath({ slug: pages[0].slug })} />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "*",
+      element: <NoMatch />,
+      errorElement: <ErrorPage />,
+    },
+  ]);
 
-      <Route
-        path={HOME_PATH}
-        element={<Navigate to={getPath({ slug: pages[0].slug })} />}
-      />
-
-      <Route path="*" element={<NoMatch />} />
-    </Routes>
-  );
+  return <RouterProvider router={router} />;
 };

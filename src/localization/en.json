@@ -3,6 +3,11 @@
     "noMatch": {
       "title": "404",
       "content": "Page not found!"
+    },
+    "errorPage": {
+      "title": "Oops!",
+      "content": "Something went wrong!",
+      "link": "Back."
     }
   },
   "selects": {
