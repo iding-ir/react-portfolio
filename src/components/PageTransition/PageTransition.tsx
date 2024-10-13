@@ -1,31 +1,30 @@
 import clsx from "clsx";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { v4 as uuid } from "uuid";
 
-import { getCssVariable } from "../../utils/get-css-variable";
 import styles from "./PageTransition.module.scss";
 
 export const PageTransition = () => {
+  const location = useLocation();
   const [active, setActive] = useState(false);
-  const { slug } = useParams();
+  const [key, setKey] = useState(uuid());
+
+  useEffect(() => {
+    setActive(true);
+    setKey(uuid());
+  }, [location]);
+
+  const handleAnimationEnd = () => {
+    setActive(false);
+  };
 
   const classNames = clsx(styles.container, {
     [styles.active]: active,
   });
 
-  useEffect(() => {
-    setActive(true);
-
-    const timeout = setTimeout(
-      () => setActive(false),
-      Number(getCssVariable("--page-transition-duration").replace("ms", "")),
-    );
-
-    return () => clearTimeout(timeout);
-  }, [slug]);
-
   return (
-    <div className={classNames}>
+    <div className={classNames} key={key} onAnimationEnd={handleAnimationEnd}>
       <div className={styles.fader} />
       <div className={styles.slider} />
     </div>
