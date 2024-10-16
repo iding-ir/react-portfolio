@@ -15,6 +15,8 @@ export const LadyBug = ({
 }) => {
   return (
     <Layout.Section>
+      <Layout.Head />
+
       <Layout.Navigation>
         <Navigation />
       </Layout.Navigation>

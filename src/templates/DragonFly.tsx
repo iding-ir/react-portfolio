@@ -23,6 +23,8 @@ export const DragonFly = () => {
 
   return (
     <Layout.Section>
+      <Layout.Head subtitle={title} />
+
       <Layout.Navigation>
         <Navigation />
       </Layout.Navigation>

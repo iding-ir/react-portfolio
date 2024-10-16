@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { HelmetProvider } from "react-helmet-async";
 import { PersistGate } from "redux-persist/integration/react";
 
 import { persistor } from "../../app/store";
@@ -8,7 +9,7 @@ export const Wrappers = ({ children }: { children: ReactNode }) => {
   return (
     <StoreProvider>
       <PersistGate loading={null} persistor={persistor}>
-        {children}
+        <HelmetProvider>{children}</HelmetProvider>
       </PersistGate>
     </StoreProvider>
   );
