@@ -5,6 +5,11 @@
       "content": "Page not found!"
     },
     "errorPage": {
+      "title": "Error!",
+      "content": "Caught an error!",
+      "link": "Back."
+    },
+    "oopsPage": {
       "title": "Oops!",
       "content": "Something went wrong!",
       "link": "Back."

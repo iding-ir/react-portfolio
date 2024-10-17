@@ -11,11 +11,13 @@ import { Layout } from "../../layout";
 import { getPath } from "../../methods/get-path";
 import { NoMatch } from "../../pages";
 import { ErrorPage } from "../../pages/ErrorPage";
+import { OopsPage } from "../../pages/OopsPage";
 import { DragonFly } from "../../templates/DragonFly";
 
 export const Pages = () => {
   usePersist();
   const { pages, isLoading } = useData();
+  const errorElement = import.meta.env.DEV ? <ErrorPage /> : <OopsPage />;
 
   if (isLoading) {
     return <Layout.Loader />;
@@ -25,17 +27,17 @@ export const Pages = () => {
     ...pages.map(() => ({
       path: getPath({ slug: ":slug" }),
       element: <DragonFly />,
-      errorElement: <ErrorPage />,
+      errorElement,
     })),
     {
       path: HOME_PATH,
       element: <Navigate to={getPath({ slug: pages[0].slug })} />,
-      errorElement: <ErrorPage />,
+      errorElement,
     },
     {
       path: "*",
       element: <NoMatch />,
-      errorElement: <ErrorPage />,
+      errorElement,
     },
   ]);
 
