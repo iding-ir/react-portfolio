@@ -2,6 +2,7 @@ export type Data = {
   pages: PageType[];
   links: LinkType[];
   footer: string;
+  logo: string;
 };
 
 export type PageType = {
