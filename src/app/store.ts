@@ -29,7 +29,7 @@ const persistConfig = {
   key: "root",
   version: 1,
   storage,
-  blacklist: [modalSlice.name],
+  blacklist: [modalSlice.name, dataApi.reducerPath],
 };
 
 const rootReducer = combineSlices(
