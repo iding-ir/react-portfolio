@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-import { MINIMUM_FETCH_DELAY } from "../../constants";
 import { Data } from "../../types";
 import { Language } from "../language";
 
@@ -10,7 +9,9 @@ type GetPageArgs = { language: Language; file: string };
 export const dataApi = createApi({
   reducerPath: "dataApi",
   baseQuery: async (...params) => {
-    await new Promise((resolve) => setTimeout(resolve, MINIMUM_FETCH_DELAY));
+    await new Promise((resolve) =>
+      setTimeout(resolve, import.meta.env.VITE_MINIMUM_FETCH_DELAY),
+    );
     return fetchBaseQuery({ baseUrl: "/" })(...params);
   },
   tagTypes: [],
