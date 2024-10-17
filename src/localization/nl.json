@@ -1,33 +1,33 @@
 {
   "pages": {
     "noMatch": {
-      "title": "[nl] 404",
-      "content": "[nl] Page not found!"
+      "title": "404",
+      "content": "Pagina niet gevonden!"
     },
     "errorPage": {
-      "title": "[nl] Error!",
-      "content": "[nl] Caught an error!",
-      "link": "[nl] Back."
+      "title": "Fout!",
+      "content": "Fout gevonden!",
+      "link": "Rug."
     },
     "oopsPage": {
-      "title": "[nl] Oops!",
-      "content": "[nl] Something went wrong!",
-      "link": "[nl] Back."
+      "title": "Oeps!",
+      "content": "Er is iets fout gegaan!",
+      "link": "Rug."
     }
   },
   "selects": {
     "language": {
-      "en": "[nl] English",
-      "nl": "[nl] Dutch"
+      "en": "Engels",
+      "nl": "Nederlands"
     },
     "theme": {
-      "light": "[nl] Light",
-      "dark": "[nl] Dark"
+      "light": "Licht",
+      "dark": "Donker"
     },
     "size": {
-      "sm": "[nl] Small",
-      "md": "[nl] Medium",
-      "lg": "[nl] Large"
+      "sm": "Klein",
+      "md": "Medium",
+      "lg": "Groot"
     }
   }
 }

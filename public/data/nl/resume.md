@@ -1,1 +1,1 @@
-## [nl] This is a simple Resume page.
+[Download mijn CV](/files/Resume%20-%20Aydin%20Ghane%20Khoshkebijari.pdf)

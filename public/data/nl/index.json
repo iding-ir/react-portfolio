@@ -1,7 +1,7 @@
 {
   "pages": [
     {
-      "title": "About",
+      "title": "Over",
       "file": "./about.md",
       "icon": "/assets/icons/icon-about.svg",
       "slug": "about"
@@ -13,7 +13,7 @@
       "slug": "contact"
     },
     {
-      "title": "Resume",
+      "title": "Cv",
       "file": "./resume.md",
       "icon": "/assets/icons/icon-resume.svg",
       "slug": "resume"
