@@ -4,7 +4,7 @@ In early 2000's I used to use Flash MX for animating and developing games, and f
 
 From mid 2000's, I started my career as a fullstack developer using HTML, CSS and PHP. I continued this as a freelancer for about a decade.
 
-Around 2016, I decided to focus my career on the front-end. I draw and I'm a visual human being after all.
+Around mid 2010's, I decided to focus my career on the front-end. Drawing and being a visual person helped with this decision.
 
 In 2022 I moved to the Netherlands.
 
