@@ -12,16 +12,12 @@ html {
   font-family: Roboto;
   font-size: calc(var(--size-ratio) * 12px);
   line-height: 1.5;
-}
 
-@media only screen and (min-width: $breakpoint-md) {
-  html {
+  @media only screen and (min-width: $breakpoint-md) {
     font-size: calc(var(--size-ratio) * 14px);
   }
-}
 
-@media only screen and (min-width: $breakpoint-lg) {
-  html {
+  @media only screen and (min-width: $breakpoint-lg) {
     font-size: calc(var(--size-ratio) * 16px);
   }
 }
