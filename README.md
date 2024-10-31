@@ -1,6 +1,7 @@
 # Index
 
 - [About](#about)
+- [Features](#features)
 - [Demo](#demo)
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
@@ -8,12 +9,32 @@
 ## About
 Use JSON and Markdown files to define static pages per different languages, and let react-portfolio render your portfolio.
 
+## Features
+- Converts Markdown files to a single page web application.
+- Fully responsive and mobile first.
+- Supports localization for multi-lingual portfolios.
+- Supports build-time and runtime theming.
+- Supports routing: each markdown file is mapped to a different route.
+- Uses LocalStorage for persisting state between visits.
+- Uses cashing for better user experience.
+- Leverages `.env` files to support different configurations in dev and prod environments.
+- Uses CSS animations, animated SVG, and Lottie animations where they serve best.
+- And more...
+
 ## Demo
 [My very own Portfolio](https://iding.ir)
 
 ## Tech Stack
-
-`Vite`, `React`, `Redux Toolkit`, `React Router`, `React i18next`, `Redux Persist`, `Markdown to JSX`, `SCSS Modules`, `React Helmet Async`.
+- `Vite` for building the project.
+- `React` for development.
+- `Redux Toolkit` for state management, querying, caching, and handling effects.
+- `React Router` for handling routes.
+- `React i18next` for localization.
+- `Redux Persist` for persisting the state of app between user views.
+- `Markdown to JSX` for rendering `.md` files.
+- `SCSS Modules` for component-scoped styles.
+- `React Helmet Async` for changing `head` in runtime.
+- `Lottie` animations for loader.
 
 ## Installation
 
