@@ -1,3 +1,11 @@
-export const setDataAttribute = (attribute: string, value: string) => {
-  document.getElementsByTagName("html")[0].setAttribute(attribute, value);
+export const setDataAttribute = ({
+  attr,
+  value,
+  element,
+}: {
+  attr: string;
+  value: string;
+  element: HTMLElement;
+}) => {
+  element.setAttribute(attr, value);
 };

@@ -14,5 +14,9 @@ themeListenerMiddleware.startListening({
 });
 
 export const changeTheme = (theme: Theme) => {
-  setDataAttribute("data-theme", theme);
+  setDataAttribute({
+    attr: "data-theme",
+    value: theme,
+    element: document.getElementsByTagName("html")[0],
+  });
 };

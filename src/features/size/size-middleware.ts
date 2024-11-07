@@ -14,5 +14,9 @@ sizeListenerMiddleware.startListening({
 });
 
 export const changeSize = (size: Size) => {
-  setDataAttribute("data-size", size);
+  setDataAttribute({
+    attr: "data-size",
+    value: size,
+    element: document.getElementsByTagName("html")[0],
+  });
 };

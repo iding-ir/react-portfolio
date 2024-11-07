@@ -1,3 +1,11 @@
-export const setCssVariable = (variable: string, value: string) => {
-  document.documentElement.style.setProperty(variable, value);
+export const setCssVariable = ({
+  element,
+  key,
+  value,
+}: {
+  element: HTMLElement;
+  key: string;
+  value: string;
+}) => {
+  element.style.setProperty(key, value);
 };
