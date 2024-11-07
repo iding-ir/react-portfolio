@@ -11,7 +11,7 @@ export const Hamburger = () => {
   };
 
   return (
-    <Icon onClick={handleClick} color="reverse">
+    <Icon onClick={handleClick} color="reverse" ariaLabel="Menu">
       <MenuIcon />
     </Icon>
   );

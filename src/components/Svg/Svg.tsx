@@ -9,6 +9,7 @@ export const Svg = ({
   animated = false,
   text,
   src,
+  ariaLabel,
   onClick,
 }: {
   size?: "sm" | "md" | "lg";
@@ -17,6 +18,7 @@ export const Svg = ({
   animated?: boolean;
   text?: string;
   src?: string;
+  ariaLabel?: string;
   onClick?: () => void;
 }) => {
   const classNames = clsx(styles.container, {
@@ -30,7 +32,7 @@ export const Svg = ({
   });
 
   return (
-    <div className={classNames} onClick={onClick}>
+    <div className={classNames} onClick={onClick} aria-label={ariaLabel}>
       <span className={styles.icon} style={{ maskImage: `url(${src})` }} />
 
       {text && <span className={styles.text}>{text}</span>}

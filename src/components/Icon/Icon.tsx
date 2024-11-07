@@ -9,6 +9,7 @@ export const Icon = ({
   active = false,
   animated = false,
   text,
+  ariaLabel,
   onClick,
   children,
 }: {
@@ -17,6 +18,7 @@ export const Icon = ({
   active?: boolean;
   animated?: boolean;
   text?: string;
+  ariaLabel?: string;
   onClick?: () => void;
   children: ReactNode;
 }) => {
@@ -31,7 +33,7 @@ export const Icon = ({
   });
 
   return (
-    <div className={classNames} onClick={onClick}>
+    <div className={classNames} onClick={onClick} aria-label={ariaLabel}>
       <span className={styles.icon}>{children}</span>
 
       {text && <span className={styles.text}>{text}</span>}
