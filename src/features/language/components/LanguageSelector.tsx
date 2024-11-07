@@ -23,9 +23,11 @@ export const LanguageSelector = () => {
 
   return (
     <Select
+      id="language-selector"
       items={items}
       value={language}
       icon={<Icon />}
+      label={t("selects.language.label")}
       onChange={handleChange}
     />
   );

@@ -23,9 +23,11 @@ export const ThemeSelector = () => {
 
   return (
     <Select
+      id="theme-selector"
       items={items}
       value={theme}
       icon={<Icon />}
+      label={t("selects.theme.label")}
       onChange={handleChange}
     />
   );

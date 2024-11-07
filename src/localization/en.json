@@ -17,14 +17,17 @@
   },
   "selects": {
     "language": {
+      "label": "Language",
       "en": "English",
       "nl": "Dutch"
     },
     "theme": {
+      "label": "Theme",
       "light": "Light",
       "dark": "Dark"
     },
     "size": {
+      "label": "Size",
       "sm": "Small",
       "md": "Medium",
       "lg": "Large"

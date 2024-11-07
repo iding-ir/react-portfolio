@@ -1,5 +1,3 @@
-import clsx from "clsx";
-
 import Image from "../../assets/icon-select.svg";
 import styles from "./Select.module.scss";
 
@@ -9,25 +7,27 @@ export type Option = {
 };
 
 export const Select = ({
+  id,
   items,
   value,
   icon,
+  label,
   onChange,
 }: {
+  id: string;
   items: Option[];
   value: string;
-  icon?: React.ReactNode;
+  icon: React.ReactNode;
+  label?: string;
   onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }) => {
   return (
     <div className={styles.container}>
-      {icon && <div className={clsx(styles.icon, styles.left)}>{icon}</div>}
+      <i className={styles.icon}>{icon}</i>
 
-      <select
-        className={styles.select}
-        onChange={onChange}
-        defaultValue={value}
-      >
+      <label htmlFor={id}>{label}</label>
+
+      <select id={id} onChange={onChange} defaultValue={value}>
         {items.map((item) => (
           <option key={item.value} value={item.value}>
             {item.label}
@@ -35,9 +35,9 @@ export const Select = ({
         ))}
       </select>
 
-      <div className={clsx(styles.icon, styles.right)}>
+      <i className={styles.arrow}>
         <Image />
-      </div>
+      </i>
     </div>
   );
 };

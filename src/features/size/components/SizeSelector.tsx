@@ -23,9 +23,11 @@ export const SizeSelector = () => {
 
   return (
     <Select
+      id="size-selector"
       items={items}
       value={size}
       icon={<Icon />}
+      label={t("selects.size.label")}
       onChange={handleChange}
     />
   );

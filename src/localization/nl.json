@@ -17,14 +17,17 @@
   },
   "selects": {
     "language": {
+      "label": "Taal",
       "en": "Engels",
       "nl": "Nederlands"
     },
     "theme": {
+      "label": "Thema",
       "light": "Licht",
       "dark": "Donker"
     },
     "size": {
+      "label": "Grootte",
       "sm": "Klein",
       "md": "Medium",
       "lg": "Groot"
