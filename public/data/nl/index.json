@@ -7,16 +7,16 @@
       "slug": "about"
     },
     {
-      "title": "Contact",
-      "file": "./contact.md",
-      "icon": "/assets/icons/icon-contact.svg",
-      "slug": "contact"
-    },
-    {
       "title": "Cv",
       "file": "./resume.md",
       "icon": "/assets/icons/icon-resume.svg",
       "slug": "resume"
+    },
+    {
+      "title": "Contact",
+      "file": "./contact.md",
+      "icon": "/assets/icons/icon-contact.svg",
+      "slug": "contact"
     }
   ],
   "links": [
