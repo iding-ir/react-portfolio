@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import MoreIcon from "../../assets/icon-more.svg";
+import { useClickOutside } from "../../hooks/use-click-outside";
 import { useData } from "../../hooks/use-data";
 import { getPath } from "../../methods/get-path";
 import { Icon } from "../Icon";
@@ -12,6 +13,9 @@ import styles from "./Menu.module.scss";
 export const Menu = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const iconRef = useRef<HTMLLIElement>(null);
+  const secondaryListRef = useClickOutside<HTMLUListElement>({
+    onClick: () => setIsClosed(true),
+  });
   const [isClosed, setIsClosed] = useState(true);
   const [containerSize, setContainerSize] = useState(0);
   const [iconSize, setIconSize] = useState(0);
@@ -70,7 +74,7 @@ export const Menu = () => {
         ))}
       </ul>
 
-      <ul className={styles.secondary}>
+      <ul className={styles.secondary} ref={secondaryListRef}>
         <li className={moreClassNames} ref={iconRef}>
           <Icon onClick={() => setIsClosed(!isClosed)}>
             <MoreIcon />
