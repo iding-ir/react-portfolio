@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { useRouteError } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 
 import { HOME_PATH } from "../../constants";
 import { LadyBug } from "../../templates/LadyBug";
@@ -13,11 +13,11 @@ export const ErrorPage = () => {
       header={t("pages.errorPage.title")}
       content={
         <>
-          <h3>{t("pages.errorPage.content")}</h3>
+          <p>{t("pages.errorPage.content")}</p>
 
           <p>{error.message}</p>
 
-          <a href={HOME_PATH}>{t("pages.errorPage.link")}</a>
+          <Link to={HOME_PATH}>{t("pages.errorPage.link")}</Link>
         </>
       }
     />

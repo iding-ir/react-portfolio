@@ -1,8 +1,8 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit";
 
 import { setDataAttribute } from "../../utils/set-data-attribute";
-import { Theme } from "./theme";
 import { setTheme } from "./theme-slice";
+import { ThemeType } from "./types";
 
 export const themeListenerMiddleware = createListenerMiddleware();
 
@@ -13,7 +13,7 @@ themeListenerMiddleware.startListening({
   },
 });
 
-export const changeTheme = (theme: Theme) => {
+export const changeTheme = (theme: ThemeType) => {
   setDataAttribute({
     attr: "data-theme",
     value: theme,

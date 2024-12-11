@@ -1,10 +1,11 @@
 import { PayloadAction } from "@reduxjs/toolkit";
 
 import { createAppSlice } from "../createAppSlice";
-import { DEFAULT_SIZE, Size } from "./size";
+import { DEFAULT_SIZE } from "./size";
+import { SizeType } from "./types";
 
 export interface SizeState {
-  current: Size;
+  current: SizeType;
 }
 
 const initialState: SizeState = {
@@ -15,7 +16,7 @@ export const sizeSlice = createAppSlice({
   name: "size",
   initialState,
   reducers: (create) => ({
-    setSize: create.reducer((state, { payload }: PayloadAction<Size>) => {
+    setSize: create.reducer((state, { payload }: PayloadAction<SizeType>) => {
       state.current = payload;
     }),
   }),

@@ -4,6 +4,7 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Main } from "../components/Main";
 import { Navigation } from "../components/Navigation";
+import { useData } from "../hooks/use-data";
 import { Layout } from "../layout";
 
 export const LadyBug = ({
@@ -13,6 +14,8 @@ export const LadyBug = ({
   header: string;
   content: ReactNode;
 }) => {
+  const { footer } = useData();
+
   return (
     <Layout.Section>
       <Layout.Head />
@@ -30,7 +33,7 @@ export const LadyBug = ({
       </Layout.Main>
 
       <Layout.Footer>
-        <Footer />
+        <Footer>{footer}</Footer>
       </Layout.Footer>
     </Layout.Section>
   );

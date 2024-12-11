@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 import { HOME_PATH } from "../../constants";
 import { LadyBug } from "../../templates/LadyBug";
@@ -11,9 +12,9 @@ export const OopsPage = () => {
       header={t("pages.oopsPage.title")}
       content={
         <>
-          <h3>{t("pages.oopsPage.content")}</h3>
+          <p>{t("pages.oopsPage.content")}</p>
 
-          <a href={HOME_PATH}>{t("pages.oopsPage.link")}</a>
+          <Link to={HOME_PATH}>{t("pages.oopsPage.link")}</Link>
         </>
       }
     />

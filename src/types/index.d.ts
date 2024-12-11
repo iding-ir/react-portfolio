@@ -1,4 +1,4 @@
-export type Data = {
+export type DataType = {
   pages: PageType[];
   links: LinkType[];
   footer: string;

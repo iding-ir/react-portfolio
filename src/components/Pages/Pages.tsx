@@ -9,14 +9,15 @@ import { useData } from "../../hooks/use-data";
 import { usePersist } from "../../hooks/use-persist";
 import { Layout } from "../../layout";
 import { getPath } from "../../methods/get-path";
-import { NoMatch } from "../../pages";
 import { ErrorPage } from "../../pages/ErrorPage";
+import { NoMatch } from "../../pages/NoMatch";
 import { OopsPage } from "../../pages/OopsPage";
 import { DragonFly } from "../../templates/DragonFly";
 
 export const Pages = () => {
   usePersist();
   const { pages, isLoading } = useData();
+
   const errorElement = import.meta.env.DEV ? <ErrorPage /> : <OopsPage />;
 
   if (isLoading) {

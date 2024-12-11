@@ -2,7 +2,8 @@
   "pages": {
     "noMatch": {
       "title": "404",
-      "content": "Pagina niet gevonden!"
+      "content": "Pagina niet gevonden!",
+      "link": "Rug."
     },
     "errorPage": {
       "title": "Fout!",

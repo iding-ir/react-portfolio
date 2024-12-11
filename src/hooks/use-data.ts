@@ -1,7 +1,7 @@
 import { useAppSelector } from "../app/hooks";
+import { useGetDataQuery } from "../features/data/data-api";
 import { selectLanguage } from "../features/language";
-import { useGetDataQuery } from "../features/services/data";
-import { Data } from "../types";
+import { DataType } from "../types";
 
 export const useData = () => {
   const language = useAppSelector(selectLanguage);
@@ -11,5 +11,5 @@ export const useData = () => {
     throw new Error("useData: error fetching data");
   }
 
-  return { ...(data as Data), isLoading };
+  return { ...(data as DataType), isLoading };
 };

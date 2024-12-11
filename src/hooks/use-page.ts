@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 
 import { useAppSelector } from "../app/hooks";
+import { useGetPageQuery } from "../features/data/data-api";
 import { selectLanguage } from "../features/language";
-import { useGetPageQuery } from "../features/services/data";
 import { useData } from "./use-data";
 
 export const usePage = () => {
@@ -14,6 +14,7 @@ export const usePage = () => {
 
   const language = useAppSelector(selectLanguage);
   const { pages } = useData();
+
   const page = pages.find((page) => page.slug === slug);
 
   if (!page) {

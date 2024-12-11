@@ -10,7 +10,7 @@ import { usePage } from "../hooks/use-page";
 import { Layout } from "../layout";
 
 export const DragonFly = () => {
-  const { links } = useData();
+  const { links, footer } = useData();
   const {
     markdown,
     page: { title },
@@ -42,7 +42,7 @@ export const DragonFly = () => {
       </Layout.Main>
 
       <Layout.Footer>
-        <Footer />
+        <Footer>{footer}</Footer>
       </Layout.Footer>
     </Layout.Section>
   );

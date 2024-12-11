@@ -1,8 +1,8 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit";
 
 import i18n from "../../localization";
-import { Language } from "./language";
 import { setLanguage } from "./language-slice";
+import { LanguageType } from "./types";
 
 export const languageListenerMiddleware = createListenerMiddleware();
 
@@ -13,6 +13,6 @@ languageListenerMiddleware.startListening({
   },
 });
 
-export const changeLanguage = (language: Language) => {
+export const changeLanguage = (language: LanguageType) => {
   i18n.changeLanguage(language);
 };

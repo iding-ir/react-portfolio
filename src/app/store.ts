@@ -16,10 +16,10 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
+import { dataApi } from "../features/data/data-api";
 import { languageSlice } from "../features/language";
 import { languageListenerMiddleware } from "../features/language/language-middleware";
 import { modalSlice } from "../features/modal";
-import { dataApi } from "../features/services/data";
 import { sizeSlice } from "../features/size";
 import { sizeListenerMiddleware } from "../features/size/size-middleware";
 import { themeSlice } from "../features/theme";

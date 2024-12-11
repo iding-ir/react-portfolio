@@ -1,22 +1,18 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-import { Data } from "../../types";
-import { Language } from "../language";
-
-type GetDataArgs = { language: Language };
-type GetPageArgs = { language: Language; file: string };
+import { DataType } from "../../types";
+import { GetDataArgs, GetPageArgs } from "./types";
 
 export const dataApi = createApi({
   reducerPath: "dataApi",
   baseQuery: async (...params) => {
-    await new Promise((resolve) =>
-      setTimeout(resolve, import.meta.env.VITE_MINIMUM_FETCH_DELAY),
-    );
+    const delay = import.meta.env.VITE_MINIMUM_FETCH_DELAY as number;
+    await new Promise((resolve) => setTimeout(resolve, delay));
     return fetchBaseQuery({ baseUrl: "/" })(...params);
   },
   tagTypes: [],
   endpoints: (builder) => ({
-    getData: builder.query<Data, GetDataArgs>({
+    getData: builder.query<DataType, GetDataArgs>({
       query: ({ language }) => `data/${language}/index.json`,
     }),
     getPage: builder.query<string, GetPageArgs>({

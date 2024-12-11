@@ -1,8 +1,8 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit";
 
 import { setDataAttribute } from "../../utils/set-data-attribute";
-import { Size } from "./size";
 import { setSize } from "./size-slice";
+import { SizeType } from "./types";
 
 export const sizeListenerMiddleware = createListenerMiddleware();
 
@@ -13,7 +13,7 @@ sizeListenerMiddleware.startListening({
   },
 });
 
-export const changeSize = (size: Size) => {
+export const changeSize = (size: SizeType) => {
   setDataAttribute({
     attr: "data-size",
     value: size,
