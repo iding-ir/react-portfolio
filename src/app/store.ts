@@ -17,9 +17,9 @@ import {
 import storage from "redux-persist/lib/storage";
 
 import { dataApi } from "../features/data/data-api";
+import { dialogSlice } from "../features/dialog";
 import { languageSlice } from "../features/language";
 import { languageListenerMiddleware } from "../features/language/language-middleware";
-import { modalSlice } from "../features/modal";
 import { sizeSlice } from "../features/size";
 import { sizeListenerMiddleware } from "../features/size/size-middleware";
 import { themeSlice } from "../features/theme";
@@ -29,14 +29,14 @@ const persistConfig = {
   key: "root",
   version: 1,
   storage,
-  blacklist: [modalSlice.name, dataApi.reducerPath],
+  blacklist: [dialogSlice.name, dataApi.reducerPath],
 };
 
 const rootReducer = combineSlices(
   themeSlice,
   sizeSlice,
   languageSlice,
-  modalSlice,
+  dialogSlice,
   dataApi,
 );
 

@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 
-import styles from "./PageTransition.module.scss";
+import styles from "./Transition.module.scss";
 
-export const PageTransition = () => {
+export const Transition = () => {
   const location = useLocation();
   const [active, setActive] = useState(false);
   const [key, setKey] = useState(uuid());

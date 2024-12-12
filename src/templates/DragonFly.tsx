@@ -1,10 +1,12 @@
 import Markdown from "markdown-to-jsx";
 
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
+import { Content } from "../components/Content";
+import { Copyright } from "../components/Copyright";
+import { Hamburger } from "../components/Hamburger";
 import { Links } from "../components/Links";
-import { Main } from "../components/Main";
 import { Navigation } from "../components/Navigation";
+import { Settings } from "../components/Settings";
+import { Title } from "../components/Title";
 import { useData } from "../hooks/use-data";
 import { usePage } from "../hooks/use-page";
 import { Layout } from "../layout";
@@ -25,25 +27,31 @@ export const DragonFly = () => {
     <Layout.Section>
       <Layout.Head subtitle={title} />
 
-      <Layout.Navigation>
+      <Layout.Aside>
+        <Hamburger />
+
         <Navigation />
-      </Layout.Navigation>
+      </Layout.Aside>
 
       <Layout.Header>
-        <Header title={title} />
+        <Title text={title} />
 
         <Links links={links} />
       </Layout.Header>
 
       <Layout.Main>
-        <Main>
+        <Content>
           <Markdown>{markdown}</Markdown>
-        </Main>
+        </Content>
       </Layout.Main>
 
       <Layout.Footer>
-        <Footer>{footer}</Footer>
+        <Copyright>{footer}</Copyright>
       </Layout.Footer>
+
+      <Layout.Dialog>
+        <Settings />
+      </Layout.Dialog>
     </Layout.Section>
   );
 };
