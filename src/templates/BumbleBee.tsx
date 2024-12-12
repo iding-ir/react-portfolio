@@ -10,7 +10,7 @@ import { Title } from "../components/Title";
 import { useData } from "../hooks/use-data";
 import { Layout } from "../layout";
 
-export const LadyBug = ({
+export const BumbleBee = ({
   title,
   content,
 }: {
@@ -21,7 +21,7 @@ export const LadyBug = ({
 
   return (
     <Layout.Section>
-      <Layout.Head />
+      <Layout.Head subtitle={title} />
 
       <Layout.Aside>
         <Hamburger />

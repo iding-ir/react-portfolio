@@ -2,14 +2,14 @@ import { useTranslation } from "react-i18next";
 import { Link, useRouteError } from "react-router-dom";
 
 import { HOME_PATH } from "../../constants";
-import { LadyBug } from "../../templates/LadyBug";
+import { BumbleBee } from "../../templates/BumbleBee";
 
 export const ErrorPage = () => {
   const { t } = useTranslation();
   const error = useRouteError() as Error;
 
   return (
-    <LadyBug
+    <BumbleBee
       title={t("pages.errorPage.title")}
       content={
         <>

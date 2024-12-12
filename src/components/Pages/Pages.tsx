@@ -7,9 +7,9 @@ import { Layout } from "../../layout";
 import { getPath } from "../../methods/get-path";
 import { CoverPage } from "../../pages/CoverPage";
 import { ErrorPage } from "../../pages/ErrorPage";
-import { NoMatch } from "../../pages/NoMatch";
+import { NoMatchPage } from "../../pages/NoMatchPage";
 import { OopsPage } from "../../pages/OopsPage";
-import { DragonFly } from "../../templates/DragonFly";
+import { PortfolioPage } from "../../pages/PortfolioPage";
 
 export const Pages = () => {
   usePersist();
@@ -29,12 +29,12 @@ export const Pages = () => {
     },
     ...pages.map(() => ({
       path: getPath({ slug: ":slug" }),
-      element: <DragonFly />,
+      element: <PortfolioPage />,
       errorElement,
     })),
     {
       path: "*",
-      element: <NoMatch />,
+      element: <NoMatchPage />,
       errorElement,
     },
   ]);

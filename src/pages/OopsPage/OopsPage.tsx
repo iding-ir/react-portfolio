@@ -2,13 +2,13 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 import { HOME_PATH } from "../../constants";
-import { LadyBug } from "../../templates/LadyBug";
+import { BumbleBee } from "../../templates/BumbleBee";
 
 export const OopsPage = () => {
   const { t } = useTranslation();
 
   return (
-    <LadyBug
+    <BumbleBee
       title={t("pages.oopsPage.title")}
       content={
         <>

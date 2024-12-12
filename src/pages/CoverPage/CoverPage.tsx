@@ -1,7 +1,7 @@
 import { Cover } from "../../components/Cover";
 import { useData } from "../../hooks/use-data";
 import { getPath } from "../../methods/get-path";
-import { LadyBug } from "../../templates/LadyBug";
+import { BumbleBee } from "../../templates/BumbleBee";
 
 export const CoverPage = () => {
   const { cover, pages } = useData();
@@ -9,7 +9,7 @@ export const CoverPage = () => {
   const { title, caption } = cover;
 
   return (
-    <LadyBug
+    <BumbleBee
       title={""}
       content={
         <Cover
