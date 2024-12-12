@@ -1,4 +1,4 @@
-Ik ben geboren in Iran en woon in Nederland. Ik heb een achtergrond in kunst en fullstack-ontwikkeling.
+Ik ben geboren in Iran en woon in Nederland. Ik ben een Senior Frontend-ingenieur met een achtergrond in kunst en fullstack-ontwikkeling.
 
 Begin jaren 2000 gebruikte ik Flash MX voor het animeren en ontwikkelen van games, en vanaf daar kreeg ik interesse in het ontwikkelen van Flash-websites.
 

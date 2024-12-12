@@ -1,4 +1,4 @@
-Iranian born and living in the Netherlands, I have a background in art and fullstack development.
+Iranian born and living in the Netherlands, I'm a Senior Frontend Engineer with a background in art and fullstack development.
 
 In early 2000's I used to use Flash MX for animating and developing games, and from there I found an interest in developing Flash websites.
 
