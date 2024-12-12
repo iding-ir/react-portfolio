@@ -1,11 +1,13 @@
+import { ChangeEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
 import { useAppDispatch } from "../../../app/hooks";
 import Icon from "../../../assets/icon-size.svg";
 import { Select } from "../../../components/Select";
-import { SIZES, Size } from "../size";
+import { SIZES } from "../size";
 import { selectSize, setSize } from "../size-slice";
+import { SizeType } from "../types";
 
 export const SizeSelector = () => {
   const { t } = useTranslation();
@@ -17,8 +19,8 @@ export const SizeSelector = () => {
     label: t(`selects.size.${size}`),
   }));
 
-  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    dispatch(setSize(event.target.value as Size));
+  const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    dispatch(setSize(event.target.value as SizeType));
   };
 
   return (

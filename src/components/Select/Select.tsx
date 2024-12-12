@@ -1,3 +1,5 @@
+import { ChangeEvent, ReactNode } from "react";
+
 import Image from "../../assets/icon-select.svg";
 import styles from "./Select.module.scss";
 
@@ -17,9 +19,9 @@ export const Select = ({
   id: string;
   items: Option[];
   value: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
   label?: string;
-  onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
 }) => {
   return (
     <div className={styles.container}>

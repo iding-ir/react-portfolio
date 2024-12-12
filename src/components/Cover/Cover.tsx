@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import Image from "../../assets/cover.svg";
+import { Icon } from "../Icon";
 import styles from "./Cover.module.scss";
 
 export const Cover = ({
@@ -20,7 +21,9 @@ export const Cover = ({
 
       <span className={styles.image}>
         <Link to={link} className={styles.link}>
-          <Image />
+          <Icon>
+            <Image />
+          </Icon>
         </Link>
       </span>
     </div>

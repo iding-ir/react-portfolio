@@ -1,11 +1,13 @@
+import { ChangeEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
 import { useAppDispatch } from "../../../app/hooks";
 import Icon from "../../../assets/icon-theme.svg";
 import { Select } from "../../../components/Select";
-import { THEMES, Theme } from "../theme";
+import { THEMES } from "../theme";
 import { selectTheme, setTheme } from "../theme-slice";
+import { ThemeType } from "../types";
 
 export const ThemeSelector = () => {
   const { t } = useTranslation();
@@ -17,8 +19,8 @@ export const ThemeSelector = () => {
     label: t(`selects.theme.${theme}`),
   }));
 
-  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    dispatch(setTheme(event.target.value as Theme));
+  const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    dispatch(setTheme(event.target.value as ThemeType));
   };
 
   return (

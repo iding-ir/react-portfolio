@@ -9,12 +9,12 @@ export const NoMatchPage = () => {
 
   return (
     <BumbleBee
-      title={t("pages.noMatch.title")}
+      title={t("pages.noMatchPage.title")}
       content={
         <>
-          <p>{t("pages.noMatch.content")}</p>
+          <p>{t("pages.noMatchPage.content")}</p>
 
-          <Link to={HOME_PATH}>{t("pages.noMatch.link")}</Link>
+          <Link to={HOME_PATH}>{t("pages.noMatchPage.link")}</Link>
         </>
       }
     />

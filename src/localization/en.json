@@ -1,6 +1,9 @@
 {
   "pages": {
-    "noMatch": {
+    "coverPage": {
+      "title": "Welcome!"
+    },
+    "noMatchPage": {
       "title": "404",
       "content": "Page not found!",
       "link": "Back."

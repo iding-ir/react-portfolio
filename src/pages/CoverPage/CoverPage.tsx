@@ -1,16 +1,20 @@
+import { useTranslation } from "react-i18next";
+
 import { Cover } from "../../components/Cover";
 import { useData } from "../../hooks/use-data";
 import { getPath } from "../../methods/get-path";
 import { BumbleBee } from "../../templates/BumbleBee";
 
 export const CoverPage = () => {
-  const { cover, pages } = useData();
-
-  const { title, caption } = cover;
+  const { t } = useTranslation();
+  const {
+    cover: { title, caption },
+    pages,
+  } = useData();
 
   return (
     <BumbleBee
-      title={""}
+      title={t("pages.coverPage.title")}
       content={
         <Cover
           title={title}

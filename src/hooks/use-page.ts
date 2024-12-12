@@ -7,11 +7,6 @@ import { useData } from "./use-data";
 
 export const usePage = () => {
   const { slug } = useParams();
-
-  if (!slug) {
-    throw new Error("usePage: slug not provided");
-  }
-
   const language = useAppSelector(selectLanguage);
   const { pages } = useData();
 

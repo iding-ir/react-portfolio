@@ -1,19 +1,22 @@
 {
   "pages": {
-    "noMatch": {
+    "coverPage": {
+      "title": "Welkom!"
+    },
+    "noMatchPage": {
       "title": "404",
       "content": "Pagina niet gevonden!",
-      "link": "Rug."
+      "link": "Link."
     },
     "errorPage": {
       "title": "Fout!",
       "content": "Fout gevonden!",
-      "link": "Rug."
+      "link": "Link."
     },
     "oopsPage": {
       "title": "Oeps!",
       "content": "Er is iets fout gegaan!",
-      "link": "Rug."
+      "link": "Link."
     }
   },
   "selects": {
