@@ -4,10 +4,12 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 
 // Colors
-$dark: 0;
-$grey: 140;
-$silver: 240;
-$light: 255;
+$light-lg: 245;
+$light-md: 230;
+$light-sm: 215;
+$dark-sm: 40;
+$dark-md: 25;
+$dark-lg: 10;
 
 // Light theme
 $color-primary-light-sm: #42a5f5;
@@ -31,4 +33,4 @@ $color-secondary-dark-lg: #ffca28;
 
 // Size ratios
 $size-ratio-sm: 0.8;
-$size-ratio-lg: 1.5;
+$size-ratio-lg: 1.2;

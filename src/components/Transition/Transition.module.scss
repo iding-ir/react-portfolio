@@ -32,13 +32,13 @@
   .fader {
     @include box;
     @include open;
-    background-color: var(--color-lighter);
+    background-color: var(--color-light-lg);
   }
 
   .slider {
     @include box;
     @include closed;
-    background-color: var(--color-light);
+    background-color: var(--color-light-md);
   }
 
   &.active {

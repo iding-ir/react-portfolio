@@ -68,6 +68,7 @@ export const Menu = () => {
                 active={slug === currentSlug}
                 text={title}
                 src={icon}
+                size="lg"
               />
             </Link>
           </li>
@@ -76,7 +77,7 @@ export const Menu = () => {
 
       <ul className={styles.secondary} ref={secondaryListRef}>
         <li className={moreClassNames} ref={iconRef}>
-          <Icon onClick={() => setIsClosed(!isClosed)}>
+          <Icon size="lg" onClick={() => setIsClosed(!isClosed)}>
             <MoreIcon />
           </Icon>
         </li>
@@ -89,6 +90,7 @@ export const Menu = () => {
                 active={slug === currentSlug}
                 text={title}
                 src={icon}
+                size="lg"
               />
             </Link>
           </li>

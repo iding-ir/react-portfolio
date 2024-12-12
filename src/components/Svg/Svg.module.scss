@@ -5,8 +5,6 @@
   gap: var(--spacing-sm);
   justify-content: center;
   align-items: center;
-  width: var(--icon-size-lg);
-  height: var(--icon-size-lg);
   overflow: hidden;
   cursor: pointer;
   transition: var(--transition-md);
@@ -15,8 +13,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    height: 30%;
 
     background-color: var(--color-lighter);
     mask-size: contain;
@@ -28,13 +24,23 @@
     font-size: var(--font-size-xs);
   }
 
+  &.xs {
+    width: var(--icon-size-xs);
+    height: var(--icon-size-xs);
+
+    .icon {
+      width: 65%;
+      height: 65%;
+    }
+  }
+
   &.sm {
     width: var(--icon-size-sm);
     height: var(--icon-size-sm);
 
     .icon {
-      width: 90%;
-      height: 90%;
+      width: 60%;
+      height: 60%;
     }
   }
 
@@ -43,8 +49,8 @@
     height: var(--icon-size-md);
 
     .icon {
-      width: 60%;
-      height: 60%;
+      width: 50%;
+      height: 50%;
     }
   }
 
@@ -53,32 +59,53 @@
     height: var(--icon-size-lg);
 
     .icon {
+      width: 35%;
+      height: 35%;
+    }
+  }
+
+  &.xl {
+    width: var(--icon-size-xl);
+    height: var(--icon-size-xl);
+
+    .icon {
       width: 30%;
       height: 30%;
     }
   }
 
   &.normal {
-    background-color: var(--color-light);
+    background-color: var(--color-light-md);
 
     .icon {
-      background-color: var(--color-primary-lg);
+      background-color: var(--color-primary-md);
     }
 
     .text {
-      color: var(--color-primary-lg);
+      color: var(--color-primary-md);
     }
 
-    &.active,
-    &:hover {
-      background-color: var(--color-secondary-md);
+    &.active {
+      background-color: var(--color-light-sm);
 
       .icon {
-        background-color: var(--color-lighter);
+        background-color: var(--color-secondary-lg);
       }
 
       .text {
-        color: var(--color-lighter);
+        color: var(--color-secondary-lg);
+      }
+    }
+
+    &:hover {
+      background-color: var(--color-secondary-lg);
+
+      .icon {
+        background-color: var(--color-light-sm);
+      }
+
+      .text {
+        color: var(--color-light-sm);
       }
     }
   }
@@ -87,23 +114,34 @@
     background-color: var(--color-primary-md);
 
     .icon {
-      background-color: var(--color-lighter);
+      background-color: var(--color-light-md);
     }
 
     .text {
-      color: var(--color-lighter);
+      color: var(--color-light-md);
     }
 
-    &.active,
-    &:hover {
-      background-color: var(--color-secondary-sm);
+    &.active {
+      background-color: var(--color-secondary-lg);
 
       .icon {
-        background-color: var(--color-darker);
+        background-color: var(--color-light-sm);
       }
 
       .text {
-        color: var(--color-darker);
+        color: var(--color-light-sm);
+      }
+    }
+
+    &:hover {
+      background-color: var(--color-secondary-md);
+
+      .icon {
+        background-color: var(--color-light-md);
+      }
+
+      .text {
+        color: var(--color-light-md);
       }
     }
   }

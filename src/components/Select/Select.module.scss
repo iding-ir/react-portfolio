@@ -35,7 +35,7 @@
   label {
     grid-row: start-label/end-label;
     grid-column: start-label/end-label;
-    color: var(--color-dark);
+    color: var(--color-dark-md);
     transition: var(--transition-sm);
     cursor: pointer;
 
@@ -48,16 +48,16 @@
     grid-row: start-select/end-select;
     grid-column: start-select/end;
     padding: var(--spacing-md);
-    color: var(--color-dark);
-    background-color: var(--color-light);
-    border-radius: var(--border-radius);
+    color: var(--color-dark-md);
+    background-color: var(--color-light-md);
+    border-radius: var(--border-radius-sm);
     border: none;
     appearance: none;
     outline: none;
     cursor: pointer;
 
     option {
-      background-color: var(--color-light);
+      background-color: var(--color-light-md);
     }
 
     &:focus {
