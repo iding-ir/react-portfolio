@@ -9,7 +9,7 @@ export const OopsPage = () => {
 
   return (
     <LadyBug
-      header={t("pages.oopsPage.title")}
+      title={t("pages.oopsPage.title")}
       content={
         <>
           <p>{t("pages.oopsPage.content")}</p>

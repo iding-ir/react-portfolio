@@ -9,7 +9,7 @@ export const NoMatch = () => {
 
   return (
     <LadyBug
-      header={t("pages.noMatch.title")}
+      title={t("pages.noMatch.title")}
       content={
         <>
           <p>{t("pages.noMatch.content")}</p>

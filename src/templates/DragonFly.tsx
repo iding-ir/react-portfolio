@@ -16,12 +16,7 @@ export const DragonFly = () => {
   const {
     markdown,
     page: { title },
-    isLoading,
   } = usePage();
-
-  if (isLoading) {
-    return <Layout.Loader />;
-  }
 
   return (
     <Layout.Section>

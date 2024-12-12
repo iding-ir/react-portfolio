@@ -10,7 +10,7 @@ export const ErrorPage = () => {
 
   return (
     <LadyBug
-      header={t("pages.errorPage.title")}
+      title={t("pages.errorPage.title")}
       content={
         <>
           <p>{t("pages.errorPage.content")}</p>
