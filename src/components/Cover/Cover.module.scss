@@ -21,17 +21,8 @@
     color: var(--color-dark-md);
   }
 
-  .image {
+  .link {
     margin: var(--spacing-lg) 0;
-
-    svg {
-      width: 5rem;
-      height: 5rem;
-
-      * {
-        fill: var(--color-primary-md);
-        transition: var(--transition-sm);
-      }
-    }
+    text-decoration: none;
   }
 }

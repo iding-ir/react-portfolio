@@ -1,6 +1,7 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-import Image from "../../assets/cover.svg";
+import CoverIcon from "../../assets/icon-cover.svg";
 import { Icon } from "../Icon";
 import styles from "./Cover.module.scss";
 
@@ -13,19 +14,19 @@ export const Cover = ({
   caption: string;
   link: string;
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>{title}</h1>
 
       <p className={styles.caption}>{caption}</p>
 
-      <span className={styles.image}>
-        <Link to={link} className={styles.link}>
-          <Icon>
-            <Image />
-          </Icon>
-        </Link>
-      </span>
+      <Link to={link} className={styles.link}>
+        <Icon size="lg" text={t("pages.coverPage.enter")}>
+          <CoverIcon />
+        </Icon>
+      </Link>
     </div>
   );
 };

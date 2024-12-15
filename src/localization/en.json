@@ -1,7 +1,8 @@
 {
   "pages": {
     "coverPage": {
-      "title": "Welcome!"
+      "title": "Welcome!",
+      "enter": "Enter"
     },
     "noMatchPage": {
       "title": "404",

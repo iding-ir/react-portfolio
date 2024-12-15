@@ -19,7 +19,7 @@ export const Dialog = ({ children }: { children: ReactNode }) => {
       {children}
 
       <div className={styles.close}>
-        <Icon onClick={handleClick} size="lg" color="reverse" ariaLabel="Close">
+        <Icon onClick={handleClick} size="xl" color="reverse" ariaLabel="Close">
           <CloseIcon />
         </Icon>
       </div>
