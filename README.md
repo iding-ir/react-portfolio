@@ -16,7 +16,7 @@ With `react-portfolio`, you can use JSON and Markdown files to render create pag
 - Supports build-time and runtime theming.
 - Supports routing: each markdown file is mapped to a different route.
 - Uses LocalStorage for persisting state between visits.
-- Uses cashing for improved performance and user experience.
+- Uses caching for improved performance and user experience.
 - Leverages `.env` files to support different configurations in dev and prod environments.
 - Uses CSS animations, animated SVG, and Lottie animations where they serve best.
 - And more...
