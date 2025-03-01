@@ -1,3 +1,3 @@
-Feel free to drop me a message on LinkedIn or GitHub.
+Feel free to drop me a message on LinkedIn.
 
-There are links to those profiles in the header of this website.
+You can find the link in the header of this website.

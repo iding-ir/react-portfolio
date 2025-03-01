@@ -1,11 +1,5 @@
-Ik ben geboren in Iran en woon in Nederland. Ik ben een Senior Frontend-ingenieur met een achtergrond in kunst en fullstack-ontwikkeling.
+Geboren in Iran en nu een Skilled Migrant in Nederland, ben ik een Senior Frontend Engineer met een achtergrond in kunst en full-stack development.
 
-Begin jaren 2000 gebruikte ik Flash MX voor het animeren en ontwikkelen van games, en vanaf daar kreeg ik interesse in het ontwikkelen van Flash-websites.
+Mijn reis begon met Flash MX, waar ik animatie en game development onderzocht voordat ik overstapte naar Flash websites. Na verloop van tijd breidde ik uit naar full-stack development, waarbij ik werkte met JavaScript, HTML, CSS, PHP en SQL. Mijn passie voor design, interactiviteit en gebruikerservaring leidde er echter toe dat ik me specialiseerde in frontend engineering.
 
-Vanaf medio 2000 begon ik mijn carrière als fullstack-ontwikkelaar met HTML, CSS en PHP. Ik zette dit ongeveer tien jaar voort als freelancer.
-
-Halverwege 2010 besloot ik om mijn carrière te richten op de front-end. Tekenen en een visueel persoon zijn hielpen bij deze beslissing.
-
-In 2022 verhuisde ik naar Nederland.
-
-In mijn privéleven fiets en kajak ik graag. Ik hou van geschiedenis en cinema, en met een diploma in elektrotechniek ben ik een IoT-hobbyist.
+Naast coderen, geniet ik van fietsen en kajakken, duik ik in geschiedenis en cinema en experimenteer ik met IoT-projecten, waarbij ik put uit mijn diploma Elektrotechniek.

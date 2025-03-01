@@ -1,11 +1,5 @@
-Iranian born and living in the Netherlands, I'm a Senior Frontend Engineer with a background in art and fullstack development.
+Born in Iran and now a Skilled Migrant in the Netherlands, I'm a Senior Frontend Engineer with a background in art and full-stack development.
 
-In early 2000's I used to use Flash MX for animating and developing games, and from there I found an interest in developing Flash websites.
+My journey began with Flash MX, where I explored animation and game development before transitioning to Flash websites. Over time, I expanded into full-stack development, working with JavaScript, HTML, CSS, PHP, and SQL. However, my passion for design, interactivity, and user experience naturally led me to specialize in frontend engineering.
 
-From mid 2000's, I started my career as a fullstack developer using HTML, CSS and PHP. I continued this as a freelancer for about a decade.
-
-Around mid 2010's, I decided to focus my career on the front-end. Drawing and being a visual person helped with this decision.
-
-In 2022 I moved to the Netherlands.
-
-In my personal life, I enjoy cycling and kayaking. I like history and cinema, and with a degree in Electrical Engineering, I'm an IoT hobbyist.
+Beyond coding, I enjoy cycling and kayaking, diving into history and cinema, and experimenting with IoT projects, drawing from my Electrical Engineering degree.

@@ -1,3 +1,3 @@
-Stuur me gerust een berichtje op LinkedIn of GitHub.
+Stuur me gerust een berichtje op LinkedIn.
 
-Er staan ​​links naar die profielen in de header van deze website.
+Je vindt de link in de header van deze website.
