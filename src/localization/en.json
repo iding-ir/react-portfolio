@@ -51,5 +51,8 @@
       "lg": "Large"
     }
   },
+  "hamburger": {
+    "ariaLabel": "Open menu"
+  },
   "logo": "Logo"
 }

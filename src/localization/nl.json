@@ -50,6 +50,9 @@
       "md": "Medium",
       "lg": "Groot"
     },
+    "hamburger": {
+      "ariaLabel": "Menu openen"
+    },
     "logo": "Logo"
   }
 }
