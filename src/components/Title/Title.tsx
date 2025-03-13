@@ -1,8 +1,8 @@
 import styles from "./Title.module.scss";
 
-export const Title = ({ text }: { text: string }) => {
+export const Title = ({ text, id }: { text: string; id: string }) => {
   return (
-    <h2 key={text} className={styles.container}>
+    <h2 id={id} key={text} className={styles.container}>
       {text}
     </h2>
   );

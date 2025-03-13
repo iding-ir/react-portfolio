@@ -10,6 +10,7 @@ export const ErrorPage = () => {
 
   return (
     <BumbleBee
+      id="error"
       pageTitle={t("pages.errorPage.title")}
       content={
         <>

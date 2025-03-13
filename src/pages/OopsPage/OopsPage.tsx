@@ -9,6 +9,7 @@ export const OopsPage = () => {
 
   return (
     <BumbleBee
+      id="oops"
       pageTitle={t("pages.oopsPage.pageTitle")}
       content={
         <>

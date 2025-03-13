@@ -9,6 +9,7 @@ export const NoMatchPage = () => {
 
   return (
     <BumbleBee
+      id="no-match"
       pageTitle={t("pages.noMatchPage.pageTitle")}
       content={
         <>

@@ -4,9 +4,15 @@ import { Transition } from "../../components/Transition";
 import { Wave } from "../../components/Wave";
 import styles from "./Section.module.scss";
 
-export const Section = ({ children }: { children: ReactNode }) => {
+export const Section = ({
+  children,
+  id,
+}: {
+  children: ReactNode;
+  id: string;
+}) => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} aria-describedby={id}>
       {children}
 
       <Transition />

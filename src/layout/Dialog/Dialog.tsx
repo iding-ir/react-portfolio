@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { useTranslation } from "react-i18next";
 
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import CloseIcon from "../../assets/icon-close.svg";
@@ -7,6 +8,7 @@ import { closeDialog, selectDialog } from "../../features/dialog";
 import styles from "./Dialog.module.scss";
 
 export const Dialog = ({ children }: { children: ReactNode }) => {
+  const { t } = useTranslation();
   const dispatch = useAppDispatch();
   const open = useAppSelector(selectDialog);
 
@@ -15,7 +17,13 @@ export const Dialog = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <dialog open={open} className={styles.container}>
+    <dialog
+      open={open}
+      className={styles.container}
+      role="dialog"
+      aria-label={t("dialog.ariaLabel")}
+      aria-description={t("dialog.ariaDescription")}
+    >
       {children}
 
       <div className={styles.close}>

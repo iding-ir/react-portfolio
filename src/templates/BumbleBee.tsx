@@ -14,9 +14,11 @@ import { Layout } from "../layout";
 export const BumbleBee = ({
   pageTitle,
   content,
+  id,
 }: {
   pageTitle: string;
   content: ReactNode;
+  id: string;
 }) => {
   const appName = import.meta.env.VITE_DEFAULT_TITLE;
   const { links, footer } = useData();
@@ -35,8 +37,8 @@ export const BumbleBee = ({
         <Links links={links} />
       </Layout.Header>
 
-      <Layout.Section>
-        <Title text={pageTitle} />
+      <Layout.Section id={`section-${id}`}>
+        <Title text={pageTitle} id={`section-${id}`} />
         <Content>{content}</Content>
       </Layout.Section>
 

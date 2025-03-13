@@ -14,6 +14,7 @@ export const CoverPage = () => {
 
   return (
     <BumbleBee
+      id="cover"
       pageTitle={t("pages.coverPage.title")}
       content={
         <Cover

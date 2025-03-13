@@ -20,6 +20,19 @@
       "link": "Back."
     }
   },
+  "aside": {
+    "ariaLabel": "Sidebar"
+  },
+  "dialog": {
+    "ariaLabel": "Settings dialog",
+    "ariaDescription": "Settings dialog for language, theme, and size."
+  },
+  "footer": {
+    "ariaLabel": "Footer"
+  },
+  "loader": {
+    "description": "Loading content, please wait..."
+  },
   "selects": {
     "language": {
       "label": "Language",

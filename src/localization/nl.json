@@ -20,6 +20,19 @@
       "link": "Link."
     }
   },
+  "aside": {
+    "ariaLabel": "zijbalk"
+  },
+  "dialog": {
+    "ariaLabel": "Dialoogvenster Instellingen",
+    "ariaDescription": "Dialoogvenster Instellingen voor taal, thema en grootte."
+  },
+  "footer": {
+    "ariaLabel": "Voettekst"
+  },
+  "loader": {
+    "description": "De inhoud wordt geladen, even geduld..."
+  },
   "selects": {
     "language": {
       "label": "Taal",
