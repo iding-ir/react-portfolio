@@ -6,8 +6,26 @@
   height: auto;
   padding: var(--spacing-sm);
 
-  img {
-    width: 100%;
-    height: auto;
+  a {
+    border: var(--border-thickness-md) solid var(--color-primary-lg);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: var(--transition-sm);
+    }
+  }
+
+  &:hover {
+    a {
+      border-color: var(--color-secondary-lg);
+
+      img {
+        filter: brightness(1.2) saturate(1.2);
+      }
+    }
   }
 }

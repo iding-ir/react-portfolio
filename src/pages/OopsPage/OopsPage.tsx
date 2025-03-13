@@ -9,7 +9,7 @@ export const OopsPage = () => {
 
   return (
     <BumbleBee
-      title={t("pages.oopsPage.title")}
+      pageTitle={t("pages.oopsPage.pageTitle")}
       content={
         <>
           <p>{t("pages.oopsPage.content")}</p>

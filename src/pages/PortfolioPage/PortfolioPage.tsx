@@ -4,10 +4,12 @@ import { usePage } from "../../hooks/use-page";
 import { BumbleBee } from "../../templates/BumbleBee";
 
 export const PortfolioPage = () => {
-  const {
-    markdown,
-    page: { title },
-  } = usePage();
+  const { markdown, page } = usePage();
 
-  return <BumbleBee title={title} content={<Markdown>{markdown}</Markdown>} />;
+  return (
+    <BumbleBee
+      pageTitle={page.title}
+      content={<Markdown>{markdown}</Markdown>}
+    />
+  );
 };

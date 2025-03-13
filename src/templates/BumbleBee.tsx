@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import { Content } from "../components/Content";
 import { Copyright } from "../components/Copyright";
 import { Hamburger } from "../components/Hamburger";
+import { Heading } from "../components/Heading";
 import { Links } from "../components/Links";
 import { Navigation } from "../components/Navigation";
 import { Settings } from "../components/Settings";
@@ -11,33 +12,33 @@ import { useData } from "../hooks/use-data";
 import { Layout } from "../layout";
 
 export const BumbleBee = ({
-  title,
+  pageTitle,
   content,
 }: {
-  title: string;
+  pageTitle: string;
   content: ReactNode;
 }) => {
+  const appName = import.meta.env.VITE_DEFAULT_TITLE;
   const { links, footer } = useData();
 
   return (
-    <Layout.Section>
-      <Layout.Head subtitle={title} />
+    <Layout.Main>
+      <Layout.Head page={pageTitle} />
 
       <Layout.Aside>
         <Hamburger />
-
         <Navigation />
       </Layout.Aside>
 
       <Layout.Header>
-        <Title text={title} />
-
+        <Heading text={appName} />
         <Links links={links} />
       </Layout.Header>
 
-      <Layout.Main>
+      <Layout.Section>
+        <Title text={pageTitle} />
         <Content>{content}</Content>
-      </Layout.Main>
+      </Layout.Section>
 
       <Layout.Footer>
         <Copyright>{footer}</Copyright>
@@ -46,6 +47,6 @@ export const BumbleBee = ({
       <Layout.Dialog>
         <Settings />
       </Layout.Dialog>
-    </Layout.Section>
+    </Layout.Main>
   );
 };

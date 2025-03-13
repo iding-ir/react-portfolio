@@ -2,8 +2,8 @@ import { Helmet } from "react-helmet-async";
 
 import { useHead } from "../../hooks/use-head";
 
-export const Head = ({ subtitle }: { subtitle?: string }) => {
-  const { appName, title, description } = useHead({ subtitle });
+export const Head = ({ page }: { page?: string }) => {
+  const { appName, title, description } = useHead({ page });
 
   return (
     <Helmet>

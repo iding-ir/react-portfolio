@@ -14,7 +14,7 @@ export const CoverPage = () => {
 
   return (
     <BumbleBee
-      title={t("pages.coverPage.title")}
+      pageTitle={t("pages.coverPage.title")}
       content={
         <Cover
           title={title}
