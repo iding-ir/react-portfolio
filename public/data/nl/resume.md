@@ -1,1 +1,1 @@
-[Download mijn CV](/files/Aydin_Ghane_Khoshkebijari_-_Senior_Frontend_Engineer.pdf)
+[Download mijn CV](/files/Aydin-Ghane-Khoshkebijari_Resume.pdf)

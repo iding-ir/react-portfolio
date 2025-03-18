@@ -1,1 +1,1 @@
-[Download my resume](/files/Aydin_Ghane_Khoshkebijari_-_Senior_Frontend_Engineer.pdf)
+[Download my resume](/files/Aydin-Ghane-Khoshkebijari_Resume.pdf)
