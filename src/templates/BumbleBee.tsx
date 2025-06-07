@@ -8,20 +8,25 @@ import { Links } from "../components/Links";
 import { Navigation } from "../components/Navigation";
 import { Settings } from "../components/Settings";
 import { Title } from "../components/Title";
-import { useData } from "../hooks/use-data";
 import { Layout } from "../layout";
+import { LinkType } from "../types";
 
 export const BumbleBee = ({
-  pageTitle,
-  content,
   id,
+  appName,
+  pageTitle,
+  links,
+  content,
+  footer,
 }: {
-  pageTitle: string;
-  content: ReactNode;
   id: string;
+  appName: string;
+  pageTitle: string;
+  links: LinkType[];
+  content: ReactNode;
+  footer: string;
 }) => {
-  const appName = import.meta.env.VITE_DEFAULT_TITLE;
-  const { links, footer } = useData();
+  const titleId = `title-${id}`;
 
   return (
     <Layout.Main>
@@ -37,8 +42,8 @@ export const BumbleBee = ({
         <Links links={links} />
       </Layout.Header>
 
-      <Layout.Section id={`section-${id}`}>
-        <Title text={pageTitle} id={`section-${id}`} />
+      <Layout.Section ariaDescribedBy={titleId}>
+        <Title text={pageTitle} id={titleId} />
         <Content>{content}</Content>
       </Layout.Section>
 

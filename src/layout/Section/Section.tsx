@@ -6,13 +6,13 @@ import styles from "./Section.module.scss";
 
 export const Section = ({
   children,
-  id,
+  ariaDescribedBy,
 }: {
   children: ReactNode;
-  id: string;
+  ariaDescribedBy: string;
 }) => {
   return (
-    <section className={styles.container} aria-describedby={id}>
+    <section className={styles.container} aria-describedby={ariaDescribedBy}>
       {children}
 
       <Transition />
