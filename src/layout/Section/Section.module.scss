@@ -1,4 +1,5 @@
 .container {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   padding: var(--spacing-lg);
@@ -7,4 +8,34 @@
   grid-row: start-main/end-main;
   grid-column: start-main/end-main;
   background-color: var(--color-light-lg);
+
+  .children {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation-name: transition;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes transition {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px);
+  }
+  40% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
