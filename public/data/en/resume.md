@@ -1,1 +1,1 @@
-[Download my resume](/files/Aydin-Ghane-Khoshkebijari_Resume.pdf)
+[Download my resume](/files/aydin-ghane-khoshkebijari_resume.pdf)

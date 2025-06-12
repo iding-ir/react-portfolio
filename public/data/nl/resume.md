@@ -1,1 +1,1 @@
-[Download mijn CV](/files/Aydin-Ghane-Khoshkebijari_Resume.pdf)
+[Download mijn CV](/files/aydin-ghane-khoshkebijari_resume.pdf)
